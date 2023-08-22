@@ -1,0 +1,14 @@
+
+R
+java:S1854"7Remove this useless assignment to local variable "out".(ïô†úÿÿÿÿ
+M
+java:S1854"7Remove this useless assignment to local variable "msg".(¥¢şÇ
+k
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(ïô†úÿÿÿÿ
+C
+java:S1481"(Remove this unused "out" local variable.(ïô†úÿÿÿÿ
+?
+java:S1481")Remove this unused "view" local variable.(˜˜ùÄ
+i
+java:S1989""SHandle the following exception that could be thrown by "sendRedirect": IOException.(Ù¦é
+Q	java:S125#"<This block of commented-out lines of code should be removed.(°ïĞ±
