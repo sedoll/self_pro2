@@ -25,14 +25,14 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
 
     <!-- 스타일 초기화 -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <!-- 웹 폰트 -->
-    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="./css/font.css">
 
     <!-- css 모듈화 -->
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/hd.css">
-    <link rel="stylesheet" href="../css/ft.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/hd.css">
+    <link rel="stylesheet" href="./css/ft.css">
     <style>
         /* 본문 영역 스타일 */
         .contents {

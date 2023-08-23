@@ -1,0 +1,25 @@
+
+Q
+java:S3740+"/Provide the parametrized type for this generic.(Ç©á»øÿÿÿÿ8›å§‚¢1
+T
+java:S1854"7Remove this useless assignment to local variable "dao".(Ã…ù8«å§‚¢1
+]
+java:S1854.";Remove this useless assignment to local variable "oriFile".(¡÷¤úÿÿÿÿ8«å§‚¢1
+^
+java:S1854/"<Remove this useless assignment to local variable "fileName".( Ñ»£ûÿÿÿÿ8«å§‚¢1
+T
+java:S18543"7Remove this useless assignment to local variable "msg".(şƒœå8«å§‚¢1
+Y
+java:S18545"7Remove this useless assignment to local variable "msg".(û­õ¡ıÿÿÿÿ8«å§‚¢1
+J
+java:S1481"(Remove this unused "msg" local variable.(‰œòùÿÿÿÿ8«å§‚¢1
+E
+java:S1481"(Remove this unused "dao" local variable.(Ã…ù8«å§‚¢1
+N
+java:S1481.",Remove this unused "oriFile" local variable.(¡÷¤úÿÿÿÿ8«å§‚¢1
+O
+java:S1481/"-Remove this unused "fileName" local variable.( Ñ»£ûÿÿÿÿ8«å§‚¢1
+]	java:S1258"<This block of commented-out lines of code should be removed.(“ŞåÅûÿÿÿÿ8«å§‚¢1
+Z	java:S106<"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8«å§‚¢1
+u
+java:S1989>"SHandle the following exception that could be thrown by "sendRedirect": IOException.(å™µ®şÿÿÿÿ8«å§‚¢1

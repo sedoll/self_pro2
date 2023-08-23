@@ -3,6 +3,9 @@
     path를 지정할 때 이름을 같게 하지 않게해라 같게하면 오류 생길 수도 있음
 --%>
 <%-- 이미지 경로 바꾸면 오류 생기므로 일단 이렇게 두자 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:set var="path2" value="<%=request.getContextPath() %>" />
 <%
     String path1 = request.getContextPath();
     String sid = (String) session.getAttribute("id");
@@ -32,17 +35,17 @@
 <meta property="og:url" content=<%=path1%>"/img/img1.jpg">
 
 <!-- 파비콘 -->
-<link rel="shortcut icon" href="/img/logo.ico">
+<link rel="shortcut icon" href="./img/logo.ico">
 <!-- 애플 계열 모바일 -->
 <!-- <link rel="apple-touch-icon-precomposed" href="../img/logo_64.png"> -->
 <!-- IE 계열 브라우저 -->
 <meta name="msapplication-TileColor" content="#FFFFFF">
 <meta name="msapplication-TileImage" content="./img/logo_48.png">
 <!-- 파이어폭스, 오페라, 또는 구형 크롬/사파리 -->
-<link rel="icon" href=<%=path1%>"/img/logo_16.png" sizes="16x16">
-<link rel="icon" href=<%=path1%>"/img/logo_32.png" sizes="32x32">
-<link rel="icon" href=<%=path1%>"/img/logo_48.png" sizes="48x48">
-<link rel="icon" href=<%=path1%>"/img/logo_64.png" sizes="64x64">
+<link rel="icon" href="./img/logo_16.png" sizes="16x16">
+<link rel="icon" href="./img/logo_32.png" sizes="32x32">
+<link rel="icon" href="./img/logo_48.png" sizes="48x48">
+<link rel="icon" href="./img/logo_64.png" sizes="64x64">
 
 <!-- 부트스트랩 -->
 <%--

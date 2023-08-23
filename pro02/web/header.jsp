@@ -28,9 +28,9 @@
     <nav class="gnb">
         <ul class="menu">
             <li class="item1">
-                <a href="" class="dp1">소개</a>
+                <a href="" class="dp1">상품</a>
                 <ul class="sub">
-                    <li><a class="move" href="/menu/company.jsp">소개</a></li>
+                    <li><a class="move" href="${path2}/ProList.do">상품목록</a></li>
 
                 </ul>
             </li>

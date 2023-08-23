@@ -1,0 +1,28 @@
+
+g	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¥—‚‚¢1
+g	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¥—‚‚¢1
+g	java:S112b"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¥—‚‚¢1
+g	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¥—‚‚¢1
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8²—‚‚¢1
+S
+java:S2696"6Make the enclosing method "static" or remove this set.(ú¡œò8²—‚‚¢1
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ8²—‚‚¢1
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(­ƒ…Ì8²—‚‚¢1
+X
+java:S2696/"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8²—‚‚¢1
+f
+java:S2147H"DCombine this catch with the one at line 70, which has the same body.(âÃƒŠıÿÿÿÿ8Â—‚‚¢1
+X
+java:S26962"6Make the enclosing method "static" or remove this set.(ÍúŠœüÿÿÿÿ8Â—‚‚¢1
+X
+java:S26964"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ8Â—‚‚¢1
+a
+java:S2147c"DCombine this catch with the one at line 97, which has the same body.(”ı¾8Â—‚‚¢1
+X
+java:S2696U"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8Â—‚‚¢1
+S
+java:S2696V"6Make the enclosing method "static" or remove this set.(Ä×Óù8Â—‚‚¢1
+N
+java:S1128",Remove this unused import 'shop.dto.Fileud'.(´€¨óûÿÿÿÿ8Ñ‹ˆ‚¢1

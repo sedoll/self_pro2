@@ -15,14 +15,15 @@
     <!-- 플러그인 연결-->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- 스타일 초기화 -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <!-- 스타일 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css">
     <!-- 웹 폰트 -->
-    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="./css/font.css">
 
     <!-- css 모듈화 -->
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/hd.css">
-    <link rel="stylesheet" href="../css/ft.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/hd.css">
+    <link rel="stylesheet" href="./css/ft.css">
     <style>
         /* 본문 영역 스타일 */
         .contents { clear:both; min-height: 100vh; background-image: url("../img/login.jpg");
@@ -103,7 +104,7 @@
         <section class="page" id="page1">
             <div class="page_wrap">
                 <h2 class="page_tit">공지사항 작성</h2>
-                <form action="${path}/AddNoticePro.do" id="login_frm" class="frm" method="post">
+                <form action="${path}/AddNoticePro.do" class="frm" method="post">
                     <table class="tb1">
                         <tbody>
                         <tr>
