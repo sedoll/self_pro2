@@ -28,7 +28,7 @@
         .contents {
             clear: both;
             min-height: 120vh;
-            background-image: url("./img/login.jpg");
+            background-image: url("../img/login.jpg"); /*여기 이런식으로 처리*/
             background-repeat: no-repeat;
             background-position: center -250px;
         }

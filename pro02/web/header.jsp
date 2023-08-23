@@ -9,6 +9,7 @@
             <li>안녕하세요,  ${sid}님</li> <!-- 로그인 한 회원의 이름 -->
             <li><a href="${path2}/Mypage.do">마이페이지</a></li>
             <li><a href="${path2}/Logout.do">로그아웃</a></li>
+                <li><a href="${path2}/Cart.do">장바구니</a></li>
                 <c:if test="${sid eq 'admin'}">
                 <li><a href="${path2}/Manage.do">관리자페이지</a></li>
                 </c:if>
@@ -53,8 +54,7 @@
             <a href="" class="dp1">고객센터</a>
             <ul class="sub">
                 <li><a class="move" href="${path2}/NoticeList.do">공지사항</a></li>
-                <li><a class="move" href="/board_stu/boardStuList.jsp">QnA</a></li>
-                <li><a class="move" href="/board_tea/boardTeaList.jsp">선생님 게시판</a></li>
+                <li><a class="move" href="${path2}/QnaList.do">QnA</a></li>
             </ul>
         </li>
         </ul>
