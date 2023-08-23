@@ -36,7 +36,7 @@
     <style>
         /* 본문 영역 스타일 */
         /* background-image: url("../img/login.jpg"); */
-        .contents { clear:both; min-height: 180vh;
+        .contents { clear:both; min-height: 250vh;
             background-repeat: no-repeat; background-position: center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
@@ -104,7 +104,8 @@
 
 
         }
-        .content > div {
+
+        .content {
             min-height: 400px;
             border-bottom: 1px solid #7e7e7e;
         }
@@ -326,10 +327,8 @@
                         </td>
                     </tr>
                     </tbody>
-
                 </table>
 
-                <%--
                 <table class="tb2" id="myTable">
                     <thead>
                     <tr>
@@ -340,20 +339,20 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="pro" items="${pro }">
+                    <c:forEach var="lev" items="${levList }">
                     <tr>
-                        <td class="item1"><%=author %></td>
-                        <td class="item2"><%=boardList.get(i).getContent() %></td>
-                        <td class="item3"><%=date %></td>
+                        <td class="item1">${lev.cid}</td>
+                        <td class="item2">${lev.contnet}</td>
+                        <td class="item3">${lev.date}</td>
                         <td class="item4">
-                        0813 댓글 수정버튼 표시안되어 코드 수정. by 백준철
-                        <% if (sid != null && sid.equals(author) ) { %>
-                        <a href="/board/updateAns.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn">수정</a>
-                        <% } %>
-                        <% if(sid!=null && (sid.equals(boardList.get(i).getAuthor()) || sid.equals("admin")) && boardList.get(i).getLev() != 0) { %>
-                        <a href="/board/deleteBoardpro.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn delete_btn"> 삭제 </a>
+<%--                            0813 댓글 수정버튼 표시안되어 코드 수정. by 백준철--%>
+                        <c:if test="sid eq lev.cid">
+                            <a href="${path}/updateAns.jsp&lev=1" class="inbtn">수정</a>
+                            <a href="${path}/deleteBoardpro.jsp&lev=1" class="inbtn delete_btn"> 삭제 </a>
+                        </c:if>
                     </td>
                     </tr>
+                    </c:forEach>
                     </tbody>
                 </table>
                 <script>
@@ -384,30 +383,20 @@
                     <table class="tb3">
                         <tbody>
                         <tr>
+                            <%--
                             <% if (sid != null) { %>
                             <th><%=sid%></th>
                             <th><textarea name="content" id="content" cols="100" rows="5" placeholder="댓글 입력" required ></textarea></th>
                             <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>
-                            <input type="hidden" name="bno" value="<%=bno%>" readonly>
-                            <input type="hidden" name="id" value="<%=sid%>" readonly>
+                            <input type="hidden" name="bno" value="${pro.no}" readonly>
+                            <input type="hidden" name="id" value="${sid}" readonly>
                             <% } else {%>
                             <p id="nologin_comment">댓글을 작성하려면 로그인하세요</p>
-                            <% } %>
+                            <% } %> --%>
                         </tr>
                         </tbody>
                     </table>
                 </form>
-                --%>
-
-
-                <%--
-                <div class="btn_group">
-                    <% if (sid != null &&( sid.equals("admin") || !sid.equals(""))) {%>
-                    <a href="/board/addAns.jsp?bno=<%=bno%>" class="inbtn" id="ans_btn">댓글 등록</a>
-                    <% } else {%>
-                    <p class="exp">회원만 댓글을 작성 할 수 있습니다.</p>
-                    <% } %>
-                </div> --%>
             </div>
         </section>
     </div>

@@ -54,10 +54,14 @@ public interface DBConnect {
 
     //cart
     final static String CART_DELETE = "DELETE FROM cart WHERE NO=?";
+
+    //review
+    final static String REVIEW_SELECT = "select * from review where par=?";
+    final static String REVIEW_INSERT = "insert into review values(defualt, ?, ?, ?, default)";
     
     
     //입고처리패턴
-    final static String PRODUCT_INSERT = "INSERT INTO product VALUES(DEFAULT, ?, '', ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT)";
+    final static String PRODUCT_INSERT = "INSERT INTO product VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, '', DEFAULT)";
     final static String CATEGORY_LOAD = "SELECT * FROM CATEGORY";
 
 

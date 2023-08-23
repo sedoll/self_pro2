@@ -10,7 +10,7 @@
             <li><a href="${path2}/Mypage.do">마이페이지</a></li>
             <li><a href="${path2}/Logout.do">로그아웃</a></li>
                 <c:if test="${sid eq 'admin'}">
-                <li><a href="/admin/boardList.jsp">관리자페이지</a></li>
+                <li><a href="${path2}/Manage.do">관리자페이지</a></li>
                 </c:if>
             </c:if>
             <c:if test="${empty sid}">

@@ -1,11 +1,0 @@
-
-^
-java:S1854"<Remove this useless assignment to local variable "realPath".(››Ø†şÿÿÿÿ8—ö·ç¡1
-a
-java:S1854
-"?Remove this useless assignment to local variable "application".(ĞÏà±şÿÿÿÿ8Ğ¼¶ç¡1
-R
-java:S1481
-"0Remove this unused "application" local variable.(ĞÏà±şÿÿÿÿ8Ñ¼¶ç¡1
-O
-java:S1481"-Remove this unused "realPath" local variable.(››Ø†şÿÿÿÿ8™ö·ç¡1

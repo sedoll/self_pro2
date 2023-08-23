@@ -1,4 +1,4 @@
-.player { width:640px; margin: 0 auto; margin-top:20px; clear:both; position:relative; height: 100vh;  overflow-x:hidden; }
+.player { width:640px; margin: 0 auto; margin-top:20px; clear:both; position:relative; height: 500px; overflow-x:hidden; }
 .vdo_fr { width: 640px; height: 360px; position:relative; overflow:hidden; clear:both; }
 button { background-color:transparent; outline:0; border:0; }
 #video { display:block;  position:absolute; }

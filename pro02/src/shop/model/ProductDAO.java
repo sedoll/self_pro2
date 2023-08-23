@@ -85,14 +85,14 @@ public class ProductDAO {
             conn = con.connect();
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, pro.getCate());
-            pstmt.setString(2, pro.getCate() + " 테스트");
+            pstmt.setString(2, pro.getCate());
             pstmt.setString(3, pro.getPname());
-            pstmt.setString(4, pro.getPlist());
-            pstmt.setInt(5, pro.getPqty());
-            pstmt.setInt(3, pro.getPrice());
-            pstmt.setString(3, pro.getImgSrc1());
-            pstmt.setString(3, pro.getImgSrc2());
-            pstmt.setString(3, pro.getImgSrc3());
+            pstmt.setString(4, pro.getPcomment());
+            pstmt.setString(5, pro.getPlist());
+            pstmt.setInt(6, pro.getPqty());
+            pstmt.setInt(7, pro.getPrice());
+            pstmt.setString(8, pro.getImgSrc1()); // 이미지
+            pstmt.setString(9, pro.getImgSrc2()); // 소개영상
             cnt = pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);

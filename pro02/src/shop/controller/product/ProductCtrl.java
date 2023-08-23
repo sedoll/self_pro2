@@ -1,7 +1,9 @@
 package shop.controller.product;
 
 import shop.dto.Product;
+import shop.dto.Review;
 import shop.model.ProductDAO;
+import shop.model.ReviewDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/Product.do")
 public class ProductCtrl extends HttpServlet {
@@ -20,6 +23,9 @@ public class ProductCtrl extends HttpServlet {
         Product pro = dao.getProduct(no);
         System.out.println(pro.toString());
         request.setAttribute("pro", pro);
+        ReviewDAO dao2 = new ReviewDAO();
+        List<Review> revList = dao2.getReviewList(no);
+        request.setAttribute("revList", revList);
         RequestDispatcher view = request.getRequestDispatcher("/product/getProduct.jsp");
         view.forward(request, response);
     }
