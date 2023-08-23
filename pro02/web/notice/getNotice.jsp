@@ -9,7 +9,7 @@
 <%@ page import="shop.model.MariaDBCon" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
+<c:set var="path" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,17 +28,17 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
 
     <!-- 스타일 초기화 -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="${path}/css/reset.css">
     <!-- 웹 폰트 -->
-    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="${path}/css/font.css">
 
     <!-- css 모듈화 -->
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/hd.css">
-    <link rel="stylesheet" href="../css/ft.css">
+    <link rel="stylesheet" href="${path}/css/common.css">
+    <link rel="stylesheet" href="${path}/css/hd.css">
+    <link rel="stylesheet" href="${path}/css/ft.css">
     <style>
         /* 본문 영역 스타일 */
-        .contents { clear:both; min-height: 180vh; background-image: url("../img/login.jpg");
+        .contents { clear:both; min-height: 180vh; background-image: url("${path}/img/login.jpg");
             background-repeat: no-repeat; background-position: center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
@@ -241,7 +241,6 @@
             font-weight: bold;
         }
     </style>
-    <c:set var="path" value="<%=request.getContextPath() %>" />
 </head>
 <body>
 <div class="wrap">

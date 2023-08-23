@@ -122,4 +122,27 @@ public class ProductDAO {
         }
         return cnt;
     }
+
+    public int getAmount(int no) {
+        int amount = 1;
+        /*
+        DBConnect con = new MariaDBCon();
+        String sql = DBConnect.PRODUCT_SELECT_ONE;
+        try {
+            conn = con.connect();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, no);
+            rs = pstmt.executeQuery();
+            if(rs.next()) {
+                amount = rs.getInt("pqty");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            con.close(pstmt, conn);
+        }*/
+        return amount;
+    }
 }

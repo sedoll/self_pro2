@@ -33,8 +33,9 @@ public class AddProductProCtrl extends HttpServlet {
             MultipartRequest mr = new MultipartRequest(request, saveDirectory, maxSize, encoding, new DefaultFileRenamePolicy());
             Product pro = new Product();
             pro.setCate(mr.getParameter("cate"));
+            pro.setCateno(mr.getParameter("cate"));
             pro.setPname(mr.getParameter("pname"));
-            pro.setPname(mr.getParameter("pcomment"));
+            pro.setPcomment(mr.getParameter("pcomment"));
             pro.setPlist(mr.getParameter("plist"));
             pro.setPqty(Integer.parseInt(mr.getParameter("pqty")));
             pro.setPrice(Integer.parseInt(mr.getParameter("price")));

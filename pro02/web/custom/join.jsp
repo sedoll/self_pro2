@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:set var="path" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +15,12 @@
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
 
     <!-- 필요한 폰트를 로딩 : 구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="${path}/css/font.css">
 
     <!-- 필요한 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/hd.css">
+    <link rel="stylesheet" href="${path}/css/common.css">
+    <link rel="stylesheet" href="${path}/css/hd.css">
 
 
     <style>
@@ -27,7 +28,7 @@
         .contents {
             clear: both;
             min-height: 250vh;
-            background-image: url("../img/login.jpg");
+            background-image: url("${path}/img/login.jpg");
             background-repeat: no-repeat;
             background-position: center -250px;
         }
@@ -285,8 +286,7 @@
 
     </style>
 
-    <link rel="stylesheet" href="../css/ft.css">
-    <c:set var="path" value="<%=request.getContextPath() %>" />
+    <link rel="stylesheet" href="${path}/css/ft.css">
 </head>
 <body>
 <div class="wrap">
@@ -304,7 +304,7 @@
 
                 <div class="join_form">
                     <div class="header">
-                        <img src="./img/로고48.png" />
+                        <img src="${path}/img/로고48.png" />
                         <h2>회원가입</h2>
 
                     </div>

@@ -7,12 +7,12 @@ g	java:S112b"FDefine and throw a dedicated exception instead of using a generi
 g	java:S112s"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
 h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
 h	java:S112›"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+`
+java:S2259‚"BA "NullPointerException" could be thrown; "conn" is nullable here.(‘όυÿ8Έτμ΅1
 d
 java:S2259>"BA "NullPointerException" could be thrown; "conn" is nullable here.(ύÒ­δϊÿÿÿÿ8Έτμ΅1
 e
 java:S2259—"BA "NullPointerException" could be thrown; "conn" is nullable here.(ΚΣώÿÿÿÿ8Έτμ΅1
-`
-java:S2259‚"BA "NullPointerException" could be thrown; "conn" is nullable here.(‘όυÿ8Έτμ΅1
 f
 java:S2147+"DCombine this catch with the one at line 41, which has the same body.(βΓƒύÿÿÿÿ8½τμ΅1
 X

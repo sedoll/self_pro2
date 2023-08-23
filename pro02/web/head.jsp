@@ -47,6 +47,9 @@
 <link rel="icon" href="./img/logo_48.png" sizes="48x48">
 <link rel="icon" href="./img/logo_64.png" sizes="64x64">
 
+<!-- 제이쿼리 -->
+<script src="./js/jquery-1.10.0.js"></script>
+
 <!-- 부트스트랩 -->
 <%--
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">

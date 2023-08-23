@@ -1,0 +1,42 @@
+
+`	java:S112D"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(äñÅíüÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+N	java:S106("9Replace this use of System.out or System.err by a logger.(­ƒ…Ì
+Q
+java:S26962"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+Q
+java:S26964"6Make the enclosing method "static" or remove this set.(‰„Ì‡ÿÿÿÿÿ
+Q
+java:S26966"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+Q
+java:S2696N"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+L
+java:S2696P"6Make the enclosing method "static" or remove this set.(Ã¹å
+Q
+java:S2696S"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+Q
+java:S2696b"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+L
+java:S2696d"6Make the enclosing method "static" or remove this set.(Ìæ°­
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(­ƒ…Ì
+A
+java:S1481y"+Remove this unused "custom" local variable.(ãáŸ
+Q
+java:S2696|"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+Q
+java:S2696~"6Make the enclosing method "static" or remove this set.(‰„Ì‡ÿÿÿÿÿ
+R
+java:S2696€"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+R
+java:S2696"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+T	java:S106‘"9Replace this use of System.out or System.err by a logger.(ÿ½œÌøÿÿÿÿ
+M
+java:S2696–"6Make the enclosing method "static" or remove this set.(Ä×Óù
