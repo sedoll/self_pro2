@@ -13,10 +13,6 @@ X
 (src/shop/controller/custom/JoinCtrl.java,6\1\61345e183c0449c9ed7b333fba44a98cba70fecb
 [
 +src/shop/controller/custom/IdCheckCtrl.java,5\d\5d1a6a20fecbdb79ab740833e37cdb423966bbdb
-_
-/src/shop/controller/admin/DeleteNoticeCtrl.java,6\3\635599aecb191defdd17399991ca2323156582e2
-H
-web/notice/getNotice.jsp,d\b\db6ade59d61139f15acc7797a5ef10f0e38f53eb
 H
 src/shop/dto/Custom.java,e\e\eee2b25408b47eb0cb83a9e63fb175694a16e920
 H
@@ -55,9 +51,5 @@ H
 src/shop/dto/Fileud.java,6\d\6d0f30d11fd33dcd92d55019459a058df2c4b59a
 M
 src/shop/model/FileudDAO.java,6\8\683ad53fd460180485d447967ef88f0514fb0f3d
-\
-,src/shop/controller/product/ProListCtrl.java,6\c\6cf8a0a52298de6e108b6fe312209ffdeebf4249
-]
--src/shop/controller/admin/DelProductCtrl.java,1\5\15696a206d97b6a73762327971c6162f3d2eb420
 M
 src/shop/model/NoticeDAO.java,7\9\7903f3a26810e9b7d1eb7bdf8dbd97b01c99ecb5

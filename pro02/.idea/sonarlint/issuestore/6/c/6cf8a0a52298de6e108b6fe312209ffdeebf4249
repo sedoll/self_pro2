@@ -1,6 +1,0 @@
-
-Q
-java:S1854";Remove this useless assignment to local variable "proList".(—χτΰ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(©„Αƒ
-|
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ΐα‘“ύÿÿÿÿ

@@ -269,7 +269,7 @@
                             </td>
                             <td>
                                 <c:if test="${sid eq 'admin'}">
-                                    <a href="/board/deleteBoardpro.jsp?lev=0" class="inbtn delete_btn" >삭제</a>
+                                    <a href="${path}/ProductDel.do?no=${pro.no}" class="inbtn delete_btn">삭제</a>
                                 </c:if>
                             </td>
                             <td>${pro.cateno}</td>

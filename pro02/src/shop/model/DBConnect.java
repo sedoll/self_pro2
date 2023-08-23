@@ -38,7 +38,7 @@ public interface DBConnect {
     final static String PRODUCT_SELECT_ONE = "SELECT * FROM product where no=?"; // 상품 상세 조회
     final static String PRODUCT_SELECT_RECENT = "SELECT * FROM product ORDER BY NO DESC LIMIT 5"; // 최근 상품 조회
     final static String PRODUCT_SELECT_BEST = "SELECT * from product where pno IN (SELECT pno FROM payment GROUP BY pno ORDER BY SUM(amount) DESC LIMIT 5)"; // 제일 잘나가는 상품 조회
-
+    final static String PRODUCT_DELETE = "delete from product where no=?";
 
     // receive
     final static String RECEIVE_INSERT = "INSERT INTO receive VALUES(DEFAULT, ?, ?, ?, DEFAULT)";

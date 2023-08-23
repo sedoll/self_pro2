@@ -1,4 +1,4 @@
-package shop.controller.notice;
+package shop.controller.admin;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

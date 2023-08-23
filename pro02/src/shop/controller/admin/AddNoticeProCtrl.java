@@ -1,4 +1,4 @@
-package shop.controller.notice;
+package shop.controller.admin;
 
 import shop.dto.Notice;
 import shop.model.NoticeDAO;

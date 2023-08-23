@@ -103,4 +103,23 @@ public class ProductDAO {
         }
         return cnt;
     }
+
+    public int delProduct(int no){
+        int cnt = 0;
+        DBConnect con = new MariaDBCon();
+        String sql = DBConnect.PRODUCT_DELETE;
+        try {
+            conn = con.connect();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, no);
+            cnt = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            con.close(pstmt, conn);
+        }
+        return cnt;
+    }
 }
