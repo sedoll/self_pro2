@@ -249,12 +249,12 @@
                             var d = new Date();
                             var date = d.getFullYear()+''+(d.getMonth()+1)+''+d.getDate()+''+d.getHours()+''+d.getMinutes()+''+d.getSeconds();
                             var IMP = window.IMP; // 생략가능
-                            IMP.init('imp31083748'); // 결제 API를 사용하기 위한 코드 입력!
+                            IMP.init('imp85122075'); // 결제 API를 사용하기 위한 코드 입력!
                             IMP.request_pay({		//결제 요청
-                                pg: "inicis",
+                                pg: "T5102001",
                                 merchant_uid : '상품명_' + date, //상점 거래 ID
                                 name : proName,				// 결제 명
-                                amount : totalPay,					// 결제금액
+                                amount : 10,					// 결제금액
                                 buyer_email : email, // 구매자 email
                                 buyer_name : cname,				// 구매자 이름
                                 buyer_tel : tel,		// 구매자 전화번호
