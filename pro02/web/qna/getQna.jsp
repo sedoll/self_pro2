@@ -264,12 +264,12 @@
                         <tr>
                             <td>
                                 <c:if test="${sid eq board.cid}">
-                                    <a href="/board/updateBoard.jsp?lev=0" class="inbtn">수정</a>
+                                    <a href="${path}/UpdateQna.do?qno=${board.qno}&lev=0" class="inbtn">수정</a>
                                 </c:if>
                             </td>
                             <td>
                                 <c:if test="${sid eq board.cid || sid eq 'admin'}">
-                                    <a href="${path}/ProductDel.do?no=${board.qno}" class="inbtn delete_btn">삭제</a>
+                                    <a href="${path}/DeleteQna.do?qno=${board.qno}&lev=0" class="inbtn delete_btn">삭제</a>
                                 </c:if>
                             </td>
                             <td>${board.cid}</td>
@@ -295,16 +295,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="lev" items="${levList }">
+                    <c:forEach var="con" items="${comment }">
                         <tr>
-                            <td class="item1">${lev.cid}</td>
-                            <td class="item2">${lev.contnet}</td>
-                            <td class="item3">${lev.date}</td>
+                            <td class="item1">${con.cid}</td>
+                            <td class="item2">${con.content}</td>
+                            <td class="item3">${con.resdate}</td>
                             <td class="item4">
                                     <%--                            0813 댓글 수정버튼 표시안되어 코드 수정. by 백준철--%>
-                                <c:if test="sid eq lev.cid">
-                                    <a href="${path}/updateAns.jsp&lev=1" class="inbtn">수정</a>
-                                    <a href="${path}/deleteBoardpro.jsp&lev=1" class="inbtn delete_btn"> 삭제 </a>
+                                <c:if test="${sid eq con.cid}">
+                                    <a href="${path}/UpdateQna.do?qno=${con.qno}&lev=1" class="inbtn">수정</a>
+                                    <a href="${path}/DeleteQna.do?qno=${con.qno}&lev=1" class="inbtn delete_btn"> 삭제 </a>
                                 </c:if>
                             </td>
                         </tr>

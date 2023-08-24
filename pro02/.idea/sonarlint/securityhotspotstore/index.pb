@@ -63,8 +63,6 @@ T
 $src/shop/controller/board/Board.java,f\f\ff3e214cc8431e0b5be43eb1ad970ea11ae0cd6a
 I
 src/shop/dto/Product.java,d\e\deed1a5704bc52066ffade0647ae1ea0bb9022a8
-N
-src/shop/model/ProductDAO.java,1\0\104bafa0fb211c0c587c3c83d4e92a20dab07269
 `
 0src/shop/controller/admin/AddProductProCtrl.java,2\e\2eb622c40c37bc1031357d4de05e0bdaa8cec21e
 E
@@ -77,7 +75,3 @@ Y
 )src/shop/controller/custom/LoginCtrl.java,0\7\074ee74ed23a6333e4918b77bbd9170d74f30bd4
 C
 web/custom/join.jsp,d\c\dc2a1091ddee3e45601d60c53472d9717673371d
-G
-web/product/proList.jsp,7\b\7b8f2775d58d68468358c748348869172775e616
-H
-web/notice/getNotice.jsp,d\b\db6ade59d61139f15acc7797a5ef10f0e38f53eb

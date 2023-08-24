@@ -44,13 +44,14 @@ public interface DBConnect {
     // qna
     final static String QNA_SELECT_ALL = "select * from qna where lev=0 order by resdate desc";
     final static String QNA_SELECT_BOARD = "select * from qna where par=? and lev=0";
-    final static String QNA_SELECT_COMMENT = "select * from qna where par=? and lev=1 order by resdate desc";
+    final static String QNA_SELECT_COMMENTS = "select * from qna where par=? and lev=1 order by resdate desc";
+    final static String QNA_SELECT_COMMENT = "select * from qna where qno=? and lev=1";
     final static String QNA_INSERT_BOARD = "INSERT INTO qna(title, content, cid, par) VALUES(?, ?, ?, ?)";
     final static String QNA_INSERT_COMMENT = "INSERT INTO qna(title, content, cid, lev, par) VALUES(?, ?, ?, ?, ?)";
     final static String QNA_UPDATE_PAR = "update qna set par=qno where par=0 and lev=0";
     final static String QNA_UPDATE_CNT = "update qna set cnt=cnt+1 where qno=?";
-    final static String QNA_UPDATE = "update notice set title=?, content=? where no=?";
-    final static String QNA_DELETE = "delete from notice where no=?";
+    final static String QNA_UPDATE = "update qna set title=?, content=? where qno=?";
+    final static String QNA_DELETE = "delete from qna where qno=?";
 
     // receive
     final static String RECEIVE_INSERT = "INSERT INTO receive VALUES(DEFAULT, ?, ?, ?, DEFAULT)";

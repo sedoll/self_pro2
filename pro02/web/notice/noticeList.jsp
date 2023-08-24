@@ -171,11 +171,11 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">공지사항</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/">공지사항</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">자유게시판</h2>
+                <h2 class="page_tit">공지사항</h2>
                 <table class="tb1" id="myTable">
                     <thead>
                     <tr>

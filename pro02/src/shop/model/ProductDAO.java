@@ -28,7 +28,12 @@ public class ProductDAO {
             while(rs.next()) {
                 Product pro = new Product();
                 pro.setNo(rs.getInt("no"));
+                pro.setCate(rs.getString("cate"));
                 pro.setPname(rs.getString("pname"));
+                pro.setPcomment(rs.getString("pcomment"));
+                pro.setPlist(rs.getString("plist"));
+                pro.setPqty(rs.getInt("pqty"));
+                pro.setPrice(rs.getInt("price"));
                 pro.setImgSrc1(rs.getString("imgsrc1"));
                 pro.setResdate(rs.getString("resdate"));
                 proList.add(pro);

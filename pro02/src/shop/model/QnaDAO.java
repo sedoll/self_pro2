@@ -86,7 +86,7 @@ public class QnaDAO {
         return q;
     }
 
-    public List<Qna> getComment(int no){
+    public List<Qna> getComments(int no){
         List<Qna> qnaList = new ArrayList<>();
         DBConnect con = new MariaDBCon();
         SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
@@ -97,7 +97,7 @@ public class QnaDAO {
         }
 
         try {
-            pstmt = conn.prepareStatement(DBConnect.QNA_SELECT_COMMENT);
+            pstmt = conn.prepareStatement(DBConnect.QNA_SELECT_COMMENTS);
             pstmt.setInt(1, no);
             rs = pstmt.executeQuery();
             while(rs.next()) {
@@ -122,6 +122,42 @@ public class QnaDAO {
             con.close(rs, pstmt, conn);
         }
         return qnaList;
+    }
+
+    public Qna getComment(int no){
+        Qna q = new Qna();
+        DBConnect con = new MariaDBCon();
+        SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
+
+        conn = con.connect();
+        if(conn!=null){
+            System.out.println("MariaSQL 연결 성공");
+        }
+
+        try {
+            pstmt = conn.prepareStatement(DBConnect.QNA_SELECT_COMMENT);
+            pstmt.setInt(1, no);
+            rs = pstmt.executeQuery();
+            if(rs.next()) {
+                q.setQno(rs.getInt("qno"));
+                q.setTitle(rs.getString("title"));
+                q.setCid(rs.getString("cid"));
+                q.setContent(rs.getString("content"));
+
+                Date d = ymd.parse(rs.getString("resdate"));  //날짜데이터로 변경
+                String date = ymd.format(d);
+                q.setResdate(date);
+                q.setLev(rs.getInt("lev"));
+                q.setCnt(rs.getInt("cnt"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        } finally {
+            con.close(rs, pstmt, conn);
+        }
+        return q;
     }
     
     // 조회수 갱신
@@ -226,7 +262,7 @@ public class QnaDAO {
         return cnt;
     }
 
-    public int updateNotice(Notice noti){
+    public int updateQna(Qna q){
         int cnt = 0;
         DBConnect con = new MariaDBCon();
         conn = con.connect();
@@ -234,10 +270,10 @@ public class QnaDAO {
             System.out.println("Maria updateNotice 연결 성공");
         }
         try {
-            pstmt = conn.prepareStatement(DBConnect.NOTICE_UPDATE);
-            pstmt.setString(1, noti.getTitle());
-            pstmt.setString(2, noti.getContent());
-            pstmt.setInt(3, noti.getNo());
+            pstmt = conn.prepareStatement(DBConnect.QNA_UPDATE);
+            pstmt.setString(1, q.getTitle());
+            pstmt.setString(2, q.getContent());
+            pstmt.setInt(3, q.getQno());
             cnt = pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -248,7 +284,7 @@ public class QnaDAO {
         return cnt;
     }
 
-    public int deleteNotice(int no){
+    public int deleteQna(int no){
         int cnt = 0;
         DBConnect con = new MariaDBCon();
         conn = con.connect();
@@ -256,7 +292,7 @@ public class QnaDAO {
             System.out.println("Maria deleteNotice 연결 성공");
         }
         try {
-            pstmt = conn.prepareStatement(DBConnect.NOTICE_DELETE);
+            pstmt = conn.prepareStatement(DBConnect.QNA_DELETE);
             pstmt.setInt(1, no);
             cnt = pstmt.executeUpdate();
         } catch (SQLException e) {

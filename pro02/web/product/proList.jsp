@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자유게시판</title>
+    <title>상품목록</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -39,7 +39,7 @@
         /* 본문 영역 스타일 */
         .contents {
             clear: both;
-            min-height: 100vh;
+            min-height: 200vh;
             background-image: url("${path}/img/login.jpg");
             background-repeat: no-repeat;
             background-position: center -250px;
@@ -107,19 +107,30 @@
             border: 1px solid #527AF2;
 
         }
-        .tb1 td {
-            padding: 5px;
-            border: 1px solid #ddd;
-            text-align: center;
-            max-height: 120px;
 
-        }
         .tb1 th:first-child {
             width: 40px;
         }
 
-        .tb1 tbody {
+        #myTable td {
+            max-height: 120px;
+            overflow: hidden; /* Overflow 처리 (필요한 경우) */
+            vertical-align: top; /* 상단 정렬로 변경 */
+        }
 
+        #myTable td > div {
+            text-align: center;
+        }
+
+        .img_tit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .img_tit img {
+            max-height: 100px;
         }
         /*
         .tb1 .item1 {
@@ -134,6 +145,23 @@
         }*/
 
         /* 기타 버튼 스타일 */
+
+        .btn1 {
+            display: block;
+            border-radius: 10px;
+            max-width: 120px;
+            text-align: center;
+            background-color: #527AF2;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn1:hover {
+            background-color: #666666;
+        }
+
         .inbtn {
             display: block;
             border-radius: 10px;
@@ -172,29 +200,57 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">공지사항</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">상품목록</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">자유게시판</h2>
+                <h2 class="page_tit">상품목록</h2>
                 <table class="tb1" id="myTable">
                     <thead>
                     <tr>
                         <th>이미지</th>
-                        <th>번호</th>
-                        <th>제목</th>
+                        <th>정보</th>
+                        <th>가격</th>
                         <th>출간일</th>
+                        <th>비고</th>
                     </tr>
                     </thead>
                     <tbody>
                     <c:forEach var="pro" items="${proList }">
                         <tr>
-                            <td><img src="${path }/storage/${pro.imgSrc1 }" width="100"/></td>
-                            <td>${pro.no }</td>
                             <td>
-                                <a href="${path}/Product.do?no=${pro.no}">${pro.pname}</a>
+                                <div class="img_tit"><img src="${path }/storage/${pro.imgSrc1 }"/></div>
                             </td>
-                            <td>${pro.resdate }</td>
+                            <td>
+                                <div>
+                                    ${pro.cate }
+                                </div>
+                                <div>
+                                    ${pro.pname}
+                                </div>
+                                <div>
+                                    ${pro.plist}
+                                </div>
+                            </td>
+                            <td>
+                                <div>${pro.price}</div>
+                            </td>
+                            <td>
+                                <div>${pro.resdate}</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <a href="${path}/Product.do?no=${pro.no}" class="btn1">상세보기</a>
+                                </div>
+                                <c:if test="${not empty sid}">
+                                    <div>
+                                        <a href="${path}/Product.do?no=${pro.no}" class="btn1">장바구니</a>
+                                    </div>
+                                    <div>
+                                        <a href="${path}/Product.do?no=${pro.no}" class="btn1">구매</a>
+                                    </div>
+                                </c:if>
+                            </td>
                         </tr>
                     </c:forEach>
                     </tbody>
