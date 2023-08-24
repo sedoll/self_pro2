@@ -19,12 +19,12 @@ import java.util.List;
 public class ProListCtrl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cate = request.getParameter("cate");
         ProductDAO dao = new ProductDAO();
         List<Product> proList = new ArrayList<>();
 
-        System.out.println("상품목록 조회" + cate);
-        if(cate.equals("전체")) {
+        String cate = request.getParameter("cate");
+
+        if(cate == null) {
             proList = dao.getProductList();
             System.out.println(proList.toString());
             request.setAttribute("proList",proList);
@@ -42,6 +42,7 @@ public class ProListCtrl extends HttpServlet {
             request.setAttribute("proList",proList);
         }
 
+        System.out.println("상품목록 조회" + cate);
         RequestDispatcher view = request.getRequestDispatcher("/product/proList.jsp");
         view.forward(request, response);
     }

@@ -29,23 +29,23 @@
     <nav class="gnb">
         <ul class="menu">
             <li class="item1">
-                <a href="${path2}/ProList.do?cate=전체" class="dp1">전체 도서</a>
+                <a href="${path2}/ProList.do" class="dp1">전체 도서</a>
                 <ul class="sub">
                     <li><a class="move" href="${path2}/ProList.do?cate=초등">초등 도서</a></li>
                     <li><a class="move" href="${path2}/ProList.do?cate=중등">중등 도서</a></li>
                     <li><a class="move" href="${path2}/ProList.do?cate=고등">고등 도서</a></li>
                 </ul>
             </li>
-            <%--
-            <li class="item2">
-                <a href="${path2}/ProList.do?cate=초등" class="dp1">초등</a>
 
+            <li class="item2">
+                <a href="${path2}/PaymentList.do" class="dp1">구매내역</a>
+                <%--
                 <ul class="sub">
                     <li><a class="move" href="/information_info/boardList.jsp">입시 정보</a></li>
                     <li><a class="move" href="/board_act/boardList.jsp">대외 활동 정보</a></li>
                     <li><a class="move" href="/file/boardList.jsp">자료실</a></li>
-                </ul>
-            </li>
+                </ul> --%>
+            </li> <%--
             <li class="item3">
                 <a href="${path2}/ProList.do?cate=중등" class="dp1">중등</a>
 

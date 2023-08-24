@@ -80,6 +80,10 @@
                             <td>
                                 ${pro.pname }
                                 <input type="hidden" name="pname" id="proName" value="${pro.pname }">
+                                <input type="hidden" name="from" id="from" value="${from }">
+                                <c:if test="${from.equals('cart')}">
+                                    <input type="hidden" name="cartno" id="cartno" value="${cartno }">
+                                </c:if>
                             </td>
                         </tr>
                         <tr>

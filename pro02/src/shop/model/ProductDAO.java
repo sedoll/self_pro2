@@ -126,7 +126,7 @@ public class ProductDAO {
     public int updProduct(Product pro){
         int cnt = 0;
         DBConnect con = new MariaDBCon();
-        String sql = DBConnect.PRODUCT_INSERT;
+        String sql = DBConnect.PRODUCT_RECEIVE;
         try {
             conn = con.connect();
             pstmt = conn.prepareStatement(sql);
