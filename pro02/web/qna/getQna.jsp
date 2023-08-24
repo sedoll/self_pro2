@@ -335,7 +335,7 @@
 
                     } );
                 </script>
-                <form action="addAnspro.jsp" id="login_frm" class="frm">
+                <form action="${path}/AddComment.do" id="login_frm" class="frm">
                     <table class="tb3">
                         <tbody>
                         <tr>
@@ -343,7 +343,7 @@
                             <th>${sid}</th>
                             <th><textarea name="content" id="content" cols="100" rows="5" placeholder="댓글 입력" required ></textarea></th>
                             <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>
-                            <input type="hidden" name="bno" value="${board.qno}" readonly>
+                            <input type="hidden" name="qno" value="${board.qno}" readonly>
                             <input type="hidden" name="id" value="${sid}" readonly>
                             </c:if>
                         </tr>

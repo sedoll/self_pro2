@@ -25,8 +25,9 @@ public class AddQnaProCtrl extends HttpServlet {
 
         HttpSession session = request.getSession(true);
         q.setCid((String) session.getAttribute("sid"));
-
-        PrintWriter out = response.getWriter();
+    
+        // 아웃객체 떄문에 한글 오류 발생
+        // PrintWriter out = response.getWriter();
 
         QnaDAO dao = new QnaDAO();
         int a = dao.addBoard(q);
@@ -34,8 +35,8 @@ public class AddQnaProCtrl extends HttpServlet {
             System.out.println("qna 작성 완료");
             response.sendRedirect("/pro02");
         } else {
-            //request.sendRedirect("/AddNotice.do");
-            out.println("<script>history.go(-1);</script>");
+            response.sendRedirect("/AddNotice.do");
+            // out.println("<script>history.go(-1);</script>");
         }
     }
 }

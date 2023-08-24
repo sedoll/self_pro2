@@ -28,11 +28,12 @@ public class QnaCtrl extends HttpServlet {
         Qna board = dao.getBoard(qno);
         request.setAttribute("board", board);
         System.out.println(board.toString());
+
         if( sid != null && ( sid.equals("admin") || (sid.equals(board.getCid())))) {
             RequestDispatcher view = request.getRequestDispatcher("/qna/getQna.jsp");
             view.forward(request, response);
         } else {
-            response.sendRedirect("/pro02");
+            response.sendRedirect("/pro02/QnaList.do");
         }
     }
 }

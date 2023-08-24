@@ -193,6 +193,39 @@ public class QnaDAO {
         return tot;
     }
 
+    public int addComment(Qna q){
+        int cnt = 0;
+        DBConnect con = new MariaDBCon();
+        conn = con.connect();
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        // par 를 넣기전에 질문 게시글을 db에 저장
+        try {
+            conn = con.connect();
+            String sql = DBConnect.QNA_INSERT_COMMENT;
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, "댓글");
+            pstmt.setString(2, q.getContent());
+            pstmt.setString(3, q.getCid());
+            pstmt.setInt(4, 1);
+            pstmt.setInt(5, q.getQno());
+            cnt = pstmt.executeUpdate();
+            if(cnt > 0) {
+                System.out.println("질문 생성 완료");
+            } else {
+                System.out.println("질문 생성 실패");
+            }
+        } catch (SQLException e) {
+            System.out.println("질문 생성: sql 에러");
+        } catch (Exception e) {
+
+        } finally {
+            con.close(pstmt, conn); // db commit(저장)
+        }
+        return cnt;
+    }
+
     public int updateNotice(Notice noti){
         int cnt = 0;
         DBConnect con = new MariaDBCon();
