@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상품목록</title>
+    <title>도서목록</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -113,7 +113,7 @@
         }
 
         #myTable td {
-            max-height: 120px;
+            max-height: 200px;
             overflow: hidden; /* Overflow 처리 (필요한 경우) */
             vertical-align: top; /* 상단 정렬로 변경 */
         }
@@ -129,8 +129,12 @@
             height: 100%;
         }
 
+        #myTable tbody tr:not(:last-child) td {
+            border-bottom: 1px solid #333;
+        }
+
         .img_tit img {
-            max-height: 100px;
+            max-height: 180px;
         }
         /*
         .tb1 .item1 {
@@ -200,15 +204,15 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">상품목록</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">도서목록</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">상품목록</h2>
+                <h2 class="page_tit">도서목록</h2>
                 <table class="tb1" id="myTable">
                     <thead>
                     <tr>
-                        <th>이미지</th>
+                        <th></th>
                         <th>정보</th>
                         <th>가격</th>
                         <th>출간일</th>
@@ -247,7 +251,7 @@
                                         <a href="${path}/Product.do?no=${pro.no}" class="btn1">장바구니</a>
                                     </div>
                                     <div>
-                                        <a href="${path}/Product.do?no=${pro.no}" class="btn1">구매</a>
+                                        <a href="${path}/AddPayment.do?pno=${pro.no }" class="btn1">구매</a>
                                     </div>
                                 </c:if>
                             </td>
@@ -259,7 +263,7 @@
                     $(document).ready( function () {
                         $('#myTable').DataTable({
                             pageLength : 5,
-                            order: [[1, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
+                            order: [[3, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
                             info: false,
                             dom: 't<f>p',
                             language: {

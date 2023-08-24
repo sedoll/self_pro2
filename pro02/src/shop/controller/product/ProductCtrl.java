@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 @WebServlet("/Product.do")
@@ -25,6 +26,7 @@ public class ProductCtrl extends HttpServlet {
         request.setAttribute("pro", pro);
         ReviewDAO dao2 = new ReviewDAO();
         List<Review> revList = dao2.getReviewList(no);
+        System.out.println(revList.toString());
         request.setAttribute("revList", revList);
         RequestDispatcher view = request.getRequestDispatcher("/product/getProduct.jsp");
         view.forward(request, response);

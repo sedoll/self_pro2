@@ -1,6 +1,7 @@
 package shop.model;
 
 import shop.dto.Notice;
+import shop.dto.Qna;
 import shop.dto.Review;
 
 import java.sql.Connection;
@@ -30,7 +31,7 @@ public class ReviewDAO {
             while(rs.next()){
                 Review rv = new Review();
                 rv.setNo(rs.getInt("no"));
-                rv.setCid(rs.getString("id"));
+                rv.setCid(rs.getString("cid"));
                 rv.setContent(rs.getString("content"));
                 rv.setPar(rs.getInt("par"));
 
@@ -47,5 +48,36 @@ public class ReviewDAO {
             con.close(rs, pstmt, conn);
         }
         return revList;
+    }
+
+    public int addReview(Review rv){
+        int cnt = 0;
+        DBConnect con = new MariaDBCon();
+        conn = con.connect();
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        // par 를 넣기전에 질문 게시글을 db에 저장
+        try {
+            conn = con.connect();
+            String sql = DBConnect.REVIEW_INSERT;
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, rv.getCid());
+            pstmt.setString(2, rv.getContent());
+            pstmt.setInt(3, rv.getPar());
+            cnt = pstmt.executeUpdate();
+            if(cnt > 0) {
+                System.out.println("리뷰 생성 완료");
+            } else {
+                System.out.println("리뷰 생성 실패");
+            }
+        } catch (SQLException e) {
+            System.out.println("리뷰 생성: sql 에러");
+        } catch (Exception e) {
+
+        } finally {
+            con.close(pstmt, conn); // db commit(저장)
+        }
+        return cnt;
     }
 }

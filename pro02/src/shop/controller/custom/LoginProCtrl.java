@@ -36,6 +36,8 @@ public class LoginProCtrl extends HttpServlet {
 //            response.setCharacterEncoding("UTF-8");
 //            view = request.getRequestDispatcher("/pro02");
 //            view.forward(request, response);
+        } else {
+            response.sendRedirect("/pro02/Login.do");
         }
     }
 }

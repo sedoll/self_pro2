@@ -35,6 +35,7 @@ public interface DBConnect {
     final static String PRODUCT_UPDATE_prono = "UPDATE product SET cateno = CONCAT(cate, NO) WHERE NO=?";
     final static String PRODUCT_UPDATE = ""; // 상품정보수정
     final static String PRODUCT_SELECT_ALL = "SELECT * FROM product ORDER BY NO"; // 상품 조회
+    final static String PRODUCT_SELECT_CATE = "SELECT * FROM product where cate=? ORDER BY NO";
     final static String PRODUCT_SELECT_ONE = "SELECT * FROM product where no=?"; // 상품 상세 조회
     final static String PRODUCT_SELECT_RECENT = "SELECT * FROM product ORDER BY NO DESC LIMIT 5"; // 최근 상품 조회
     final static String PRODUCT_SELECT_BEST = "SELECT * from product where pno IN (SELECT pno FROM payment GROUP BY pno ORDER BY SUM(amount) DESC LIMIT 5)"; // 제일 잘나가는 상품 조회
@@ -70,7 +71,7 @@ public interface DBConnect {
 
     //review
     final static String REVIEW_SELECT = "select * from review where par=?";
-    final static String REVIEW_INSERT = "insert into review values(defualt, ?, ?, ?, default)";
+    final static String REVIEW_INSERT = "insert into review values(default, ?, ?, default, ?)";
     
     
     //입고처리패턴

@@ -1,0 +1,54 @@
+
+g	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+g	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+g	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+g	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+g	java:S112b"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+g	java:S112s"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+h	java:S112›"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8τμ΅1
+d
+java:S2259>"BA "NullPointerException" could be thrown; "conn" is nullable here.(ύÒ­δϊÿÿÿÿ8Έτμ΅1
+e
+java:S2259—"BA "NullPointerException" could be thrown; "conn" is nullable here.(ΚΣώÿÿÿÿ8Έτμ΅1
+`
+java:S2259‚"BA "NullPointerException" could be thrown; "conn" is nullable here.(‘όυÿ8Έτμ΅1
+f
+java:S2147+"DCombine this catch with the one at line 41, which has the same body.(βΓƒύÿÿÿÿ8½τμ΅1
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(¬φΧωÿÿÿÿ8½τμ΅1
+S
+java:S2696"6Make the enclosing method "static" or remove this set.(¬Ύ8½τμ΅1
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(Πξ½•ÿÿÿÿÿ8½τμ΅1
+X
+java:S26968"6Make the enclosing method "static" or remove this set.(¬φΧωÿÿÿÿ8ΐτμ΅1
+U	java:S106:"9Replace this use of System.out or System.err by a logger.(ά Σ·8Ατμ΅1
+f
+java:S2147N"DCombine this catch with the one at line 76, which has the same body.(βΓƒύÿÿÿÿ8Ατμ΅1
+X
+java:S2696>"6Make the enclosing method "static" or remove this set.(ύÒ­δϊÿÿÿÿ8Ατμ΅1
+X
+java:S2696@"6Make the enclosing method "static" or remove this set.(Πξ½•ÿÿÿÿÿ8Ατμ΅1
+F
+java:S1481Y")Remove this unused "noti" local variable.(ΰΒδ—8Δτμ΅1
+X
+java:S2696\"6Make the enclosing method "static" or remove this set.(¬φΧωÿÿÿÿ8Δτμ΅1
+R
+java:S2696^"6Make the enclosing method "static" or remove this set.(‚¥”v8Ετμ΅1
+E
+java:S1481`"(Remove this unused "cnt" local variable.(›Δ‹΄8Ετμ΅1
+X
+java:S2696l"6Make the enclosing method "static" or remove this set.(¬φΧωÿÿÿÿ8Ζτμ΅1
+S
+java:S2696n"6Make the enclosing method "static" or remove this set.(¶Ων8Ζτμ΅1
+X
+java:S2696}"6Make the enclosing method "static" or remove this set.(¬φΧωÿÿÿÿ8Θτμ΅1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(βθΣ„ώÿÿÿÿ8Θτμ΅1
+T
+java:S2696‚"6Make the enclosing method "static" or remove this set.(‘όυÿ8Θτμ΅1
+Y
+java:S2696’"6Make the enclosing method "static" or remove this set.(¬φΧωÿÿÿÿ8Κτμ΅1
+[	java:S106”"9Replace this use of System.out or System.err by a logger.(Ε¥¥λόÿÿÿÿ8Κτμ΅1
+Y
+java:S2696—"6Make the enclosing method "static" or remove this set.(ΚΣώÿÿÿÿ8Κτμ΅1

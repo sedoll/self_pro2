@@ -45,13 +45,14 @@
     <%@ include file="../header.jsp"%>
     <div class="contents" style="min-height:100vh">
         <nav aria-label="breadcrumb container-fluid" style="padding-top:28px; border-bottom:2px solid #666;">
+            <%--
             <div class="container">
                 <ol class="breadcrumb justify-content-end">
                     <li class="breadcrumb-item"><a href="${path }">Home</a></li>
                     <li class="breadcrumb-item"><a href="${path }/ProList.do">Product</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Sale</li>
                 </ol>
-            </div>
+            </div> --%>
         </nav>
         <h2 class="title">상품 구매</h2>
         <div class="container">

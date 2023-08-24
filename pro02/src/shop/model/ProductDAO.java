@@ -22,6 +22,7 @@ public class ProductDAO {
         List<Product> proList = new ArrayList<>();
         DBConnect con = new MariaDBCon();
         conn = con.connect();
+        SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
         try {
             pstmt = conn.prepareStatement(DBConnect.PRODUCT_SELECT_ALL);
             rs = pstmt.executeQuery();
@@ -35,11 +36,51 @@ public class ProductDAO {
                 pro.setPqty(rs.getInt("pqty"));
                 pro.setPrice(rs.getInt("price"));
                 pro.setImgSrc1(rs.getString("imgsrc1"));
-                pro.setResdate(rs.getString("resdate"));
+
+                Date d = ymd.parse(rs.getString("resdate"));  //날짜데이터로 변경
+                String date = ymd.format(d);
+                pro.setResdate(date);
                 proList.add(pro);
             }
         } catch (SQLException e) {
             System.out.println("sql 에러");
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        } finally {
+            con.close(rs, pstmt, conn);
+        }
+        return proList;
+    }
+
+    public List<Product> getCateProductList(String cate) {
+        List<Product> proList = new ArrayList<>();
+        DBConnect con = new MariaDBCon();
+        conn = con.connect();
+        SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
+        try {
+            pstmt = conn.prepareStatement(DBConnect.PRODUCT_SELECT_CATE);
+            pstmt.setString(1, cate);
+            rs = pstmt.executeQuery();
+            while(rs.next()) {
+                Product pro = new Product();
+                pro.setNo(rs.getInt("no"));
+                pro.setCate(rs.getString("cate"));
+                pro.setPname(rs.getString("pname"));
+                pro.setPcomment(rs.getString("pcomment"));
+                pro.setPlist(rs.getString("plist"));
+                pro.setPqty(rs.getInt("pqty"));
+                pro.setPrice(rs.getInt("price"));
+                pro.setImgSrc1(rs.getString("imgsrc1"));
+
+                Date d = ymd.parse(rs.getString("resdate"));  //날짜데이터로 변경
+                String date = ymd.format(d);
+                pro.setResdate(date);
+                proList.add(pro);
+            }
+        } catch (SQLException e) {
+            System.out.println("sql 에러");
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
         } finally {
             con.close(rs, pstmt, conn);
         }

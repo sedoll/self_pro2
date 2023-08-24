@@ -1,6 +1,7 @@
  <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+ <c:set var="path" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +17,17 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- 스타일 초기화 -->
     <!-- 스타일 초기화 -->
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="${path}/css/reset.css">
     <!-- 웹 폰트 -->
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="${path}/css/font.css">
 
     <!-- css 모듈화 -->
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/hd.css">
-    <link rel="stylesheet" href="./css/ft.css">
+    <link rel="stylesheet" href="${path}/css/common.css">
+    <link rel="stylesheet" href="${path}/css/hd.css">
+    <link rel="stylesheet" href="${path}/css/ft.css">
     <style>
         /* 본문 영역 스타일 */
-        .contents { clear:both; min-height: 100vh; background-image: url("../img/login.jpg");
+        .contents { clear:both; min-height: 100vh; background-image: url("${path}/img/login.jpg");
             background-repeat: no-repeat; background-position: center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
@@ -89,7 +90,6 @@
             font-size: 16px;
         }
     </style>
-    <c:set var="path" value="<%=request.getContextPath() %>" />
 </head>
 <body>
 <div class="wrap">
@@ -108,27 +108,35 @@
                     <table class="tb1">
                         <tbody>
                         <tr>
+                            <th>카테고리</th>
                             <td colspan="2"><input type="text" name="cate" id="cate" class="indata" placeholder="카테고리 입력" autofocus required></td>
                         </tr>
                         <tr>
+                            <th>상품 이름</th>
                             <td colspan="2"><input type="text" name="pname" id="pname" class="indata" placeholder="상품 이름 입력" required></td>
                         </tr>
                         <tr>
+                            <th>상품 설명</th>
                             <td colspan="2"> <textarea name="pcomment" id="pcomment" cols="50" rows="15" placeholder="상품 설명 입력" required></textarea></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><input type="text" name="plist" id="plist" class="indata" placeholder="목차 입력"required></td>
+                            <th>상품 목차</th>
+                            <td colspan="2"> <textarea name="plist" id="plistt" cols="50" rows="8" placeholder="상품 목차 입력" required></textarea></td>
                         </tr>
                         <tr>
+                            <th>상품 수량</th>
                             <td colspan="2"><input type="text" name="pqty" id="pqty" class="indata" placeholder="상품 수량 입력" required></td>
                         </tr>
                         <tr>
+                            <th>상품 가격</th>
                             <td colspan="2"><input type="text" name="price" id="price" class="indata" placeholder="상품 가격 입력" required></td>
                         </tr>
                         <tr>
+                            <th>이미지</th>
                             <td colspan="2"><input type="file" name="imgsrc1" id="imgsrc1" class="indata" placeholder="상품 이미지" accept=".jpg, .png" required></td>
                         </tr>
                         <tr>
+                            <th>샘플 영상</th>
                             <td colspan="2"><input type="file" name="imgsrc2" id="imgsrc2" class="indata" placeholder="상품 소개 영상" accept=".mp4" required></td>
                         </tr>
                         <tr>
