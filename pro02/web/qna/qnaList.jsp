@@ -181,17 +181,19 @@
                     <tr>
                         <th class="item1" style="text-align: center">번호</th>
                         <th class="item2" style="text-align: center">제목</th>
+                        <th class="item3" style="text-align: center">작성자</th>
                         <th class="item3" style="text-align: center">작성일</th>
                         <th class="item3" style="text-align: center">조회수</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="noti" items="${notiList}" varStatus="status">
+                    <c:forEach var="qna" items="${qnaList}" varStatus="status">
                         <tr>
                             <td class="item1">${status.count}</td>
-                            <td class="item2"><a href="${path}/Notice.do?no=${noti.no}">${noti.title}</a></td>
-                            <td class="item3">${noti.resdate}</td>
-                            <td class="item3">${noti.visited}</td>
+                            <td class="item2"><a href="${path}/GetQna.do?qno=${qna.qno}">${qna.title}</a></td>
+                            <td class="item3">${qna.cid}</td>
+                            <td class="item3">${qna.resdate}</td>
+                            <td class="item3">${qna.cnt}</td>
                         </tr>
                     </c:forEach>
                     </tbody>
@@ -229,7 +231,7 @@
                 </script>
                 <div class="btn_group">
                     <c:if test="${not empty sid}">
-                        <a href="${path}/AddNotice.do" class="inbtn"> 글 작성 </a>
+                        <a href="${path}/AddQna.do" class="inbtn"> 글 작성 </a>
                     </c:if>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:set var="path" value="<%=request.getContextPath() %>" />
 <%
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
@@ -14,6 +15,26 @@
     <title>상품 구매</title>
     <c:set var="path" value="<%=request.getContextPath() %>" />
     <%@ include file="../head.jsp"%>
+
+    <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+    <!-- datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css">
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    <!-- 스타일 초기화 -->
+    <link rel="stylesheet" href="${path}/css/reset.css">
+    <!-- 웹 폰트 -->
+    <link rel="stylesheet" href="${path}/css/font.css">
+
+    <!-- css 모듈화 -->
+    <link rel="stylesheet" href="${path}/css/common.css">
+    <link rel="stylesheet" href="${path}/css/hd.css">
+    <link rel="stylesheet" href="${path}/css/ft.css">
+    <link rel="stylesheet" href="${path}/css/video.css">
+
+    <!-- 결제 api -->
     <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
     <style>
         th.item1 { width:16%; }
@@ -226,8 +247,10 @@
                             //상품명_현재시간
                             var d = new Date();
                             var date = d.getFullYear()+''+(d.getMonth()+1)+''+d.getDate()+''+d.getHours()+''+d.getMinutes()+''+d.getSeconds();
+                            var IMP = window.IMP; // 생략가능
                             IMP.init('imp31083748'); // 결제 API를 사용하기 위한 코드 입력!
                             IMP.request_pay({		//결제 요청
+                                pg: "inicis",
                                 merchant_uid : '상품명_' + date, //상점 거래 ID
                                 name : proName,				// 결제 명
                                 amount : totalPay,					// 결제금액
@@ -245,13 +268,14 @@
                                     var r3 = '결제 금액 : ' +rsp.paid_amount;
                                     var r4 = '카드 승인 번호 : '+rsp.apply_num;
 
-                                    //$("#payCk").val("yes");
-                                    //$("#payAmount").val(rsp.paid_amount);
-                                    //$("#pmethod").val(rsp.pay_method);
-                                    //$("#pcom").val(rsp.pg_provider);
-                                    //$("#cnum").val(rsp.apply_num);
-                                    //alert(msg);
-                                    //$("#paymentResult").html(r1+"<br>"+r2+"<br>"+r3+"<br>"+r4);
+                                    // 실제 결제 창
+                                    // $("#payCk").val("yes");
+                                    // $("#payAmount").val(rsp.paid_amount);
+                                    // $("#pmethod").val(rsp.pay_method);
+                                    // $("#pcom").val(rsp.pg_provider);
+                                    // $("#cnum").val(rsp.apply_num);
+                                    // alert(msg);
+                                    // $("#paymentResult").html(r1+"<br>"+r2+"<br>"+r3+"<br>"+r4);
                                 } else{
                                     //$("#paymentResult").html('결제실패<br>'+'에러내용 : ' +rsp.error_msg);
                                 }
