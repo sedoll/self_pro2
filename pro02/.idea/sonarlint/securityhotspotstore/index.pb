@@ -10,8 +10,6 @@ B
 [
 +src/shop/controller/custom/IdCheckCtrl.java,5\d\5d1a6a20fecbdb79ab740833e37cdb423966bbdb
 H
-src/shop/dto/Custom.java,e\e\eee2b25408b47eb0cb83a9e63fb175694a16e920
-H
 src/shop/dto/Notice.java,7\4\74d554fbcc4c39305d194a2af0106d2aa2aa5cd0
 =
 web/js/vdo.js,b\4\b440858e71345bed95cda4030041b421df4d12b0
@@ -19,8 +17,6 @@ H
 src/shop/dto/Fileud.java,6\d\6d0f30d11fd33dcd92d55019459a058df2c4b59a
 A
 web/css/video.css,c\0\c040cd7f1fc9cfe29745c4654aa41def3ae3356f
-M
-src/shop/model/CustomDAO.java,3\a\3a0e24e974bb6af163e321d40e7407e5b329499c
 Y
 )src/shop/controller/admin/ManageCtrl.java,8\3\8344c37dd6707ec3be89db63231a268bb234929a
 c
@@ -39,8 +35,6 @@ Z
 *src/shop/controller/custom/LogoutCtrl.java,e\6\e6325f28e8fa4b2ca963ad290991318de657a9d0
 N
 src/shop/model/MariaDBCon.java,1\1\11713afb1665e312fd543741b8c253621a7eef72
-Z
-*src/shop/controller/custom/MypageCtrl.java,9\c\9c4967370617afee4994a2f24e9cb6cff36663bc
 M
 src/shop/model/FileudDAO.java,6\8\683ad53fd460180485d447967ef88f0514fb0f3d
 M
@@ -51,8 +45,6 @@ I
 src/shop/dto/Product.java,d\e\deed1a5704bc52066ffade0647ae1ea0bb9022a8
 `
 0src/shop/controller/admin/AddProductProCtrl.java,2\e\2eb622c40c37bc1031357d4de05e0bdaa8cec21e
-Y
-)src/shop/controller/cart/AddCartCtrl.java,0\2\0278d680a30c7f78df79cffad87dcb08ea615af5
 E
 web/WEB-INF/index.jsp,6\2\629f349cba3b679de4d2e2211d6e7e6f6131c0ad
 `
@@ -67,16 +59,12 @@ Z
 0src/shop/controller/notice/UpdateNoticeCtrl.java,0\b\0b63cf82a65137527e9313a033055c77c6ee16a1
 >
 web/footer.jsp,d\1\d1d9225a0ea5584c9c07cd43b079735135b290f3
-<
-web/head.jsp,4\a\4a87f90bffcdb4e9d2b938add5b82f2f1ade81b4
 X
 (src/shop/controller/qna/QnaListCtrl.java,0\c\0cb62c11c5d587c0bebf8546dfdc4643e256f12a
 M
 src/shop/model/NoticeDAO.java,7\9\7903f3a26810e9b7d1eb7bdf8dbd97b01c99ecb5
 C
 web/qna/qnaList.jsp,5\8\58d1f29887eac3103fe50001cbc39d3dedecb172
-\
-,src/shop/controller/custom/LoginProCtrl.java,0\d\0d0963492c543f97b089078a348a742a0cb88f59
 P
  web/WEB-INF/admin/addProduct.jsp,0\d\0d67ee1045bae28049ac5f9d01acdae62c07286d
 O
@@ -87,19 +75,7 @@ R
 "web/WEB-INF/admin/updateNotice.jsp,1\3\13e96319026676ff6b83b3eb51d001bb70d209a8
 S
 #web/WEB-INF/admin/updateProduct.jsp,5\9\59d2eb989d53c39816a66979cfcce7701b98870e
-H
-src/shop/dto/Review.java,a\4\a4f226d1bdab9cdc09157f8fbe6fa04cfc015cd2
-M
-src/shop/model/ReviewDAO.java,7\1\71a77115fc347dc2850160e4191eea57c369922a
-_
-/src/shop/controller/product/ProductDelCtrl.java,0\3\03e54f49a074526af5b0e8299c1b08467e0002cb
-\
-,src/shop/controller/product/ProductCtrl.java,3\e\3ef9ea97e1cd2f95fb4f8fd2cb944b999dbe55e7
-Y
-)src/shop/controller/custom/LoginCtrl.java,0\7\074ee74ed23a6333e4918b77bbd9170d74f30bd4
 E
 web/custom/mypage.jsp,2\3\230340e00e52d9710a4ed230671e0e3c8cc8fdff
-[
-+src/shop/controller/custom/JoinProCtrl.java,9\3\939ce7a0a6a09217462872446bf42470f8065498
 D
 web/custom/login.jsp,1\7\17bd48a3e1a672525c68131fa9896495b7185ceb

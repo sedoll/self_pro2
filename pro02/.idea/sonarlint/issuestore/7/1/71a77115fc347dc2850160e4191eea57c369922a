@@ -1,25 +1,0 @@
-
-g	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8·åâµ¢1
-g	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8·åâµ¢1
-f
-java:S2147-"DCombine this catch with the one at line 43, which has the same body.(âÃƒŠıÿÿÿÿ8Àåâµ¢1
-X
-java:S2696"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8Àåâµ¢1
-X
-java:S2696"6Make the enclosing method "static" or remove this set.(ÏÕïøüÿÿÿÿ8Àåâµ¢1
-X
-java:S2696"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ8Àåâµ¢1
-X
-java:S26968"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8Áåâµ¢1
-Z
-java:S11179"8Rename "conn" which hides the field declared at line 18.(şöì¦ùÿÿÿÿ8Áåâµ¢1
-[
-java:S1117:"9Rename "pstmt" which hides the field declared at line 19.(´Ÿ¿½şÿÿÿÿ8Áåâµ¢1
-Z	java:S106F"9Replace this use of System.out or System.err by a logger.(±ıš•şÿÿÿÿ8Âåâµ¢1
-Z	java:S106H"9Replace this use of System.out or System.err by a logger.(®®öøÿÿÿÿ8Âåâµ¢1
-Z	java:S106K"9Replace this use of System.out or System.err by a logger.(°£ª‡øÿÿÿÿ8Âåâµ¢1
-E	java:S108L")Either remove or fill this block of code.(”ı¾8Âåâµ¢1
-N
-java:S1128",Remove this unused import 'shop.dto.Notice'.(¬¶¯£ıÿÿÿÿ8™±ãµ¢1
-K
-java:S1128")Remove this unused import 'shop.dto.Qna'.(üì®”øÿÿÿÿ8™±ãµ¢1

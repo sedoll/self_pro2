@@ -2,6 +2,7 @@ package shop.controller.custom;
 
 import shop.dto.Custom;
 import shop.model.CustomDAO;
+import shop.util.AES256;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,8 +24,8 @@ public class MypageCtrl extends HttpServlet {
         Custom cus = dao.getCustom(id);
 
         System.out.println(cus.toString());
-
         request.setAttribute("cus", cus);
+        
         RequestDispatcher view = request.getRequestDispatcher("/custom/mypage.jsp");
         view.forward(request, response);
     }

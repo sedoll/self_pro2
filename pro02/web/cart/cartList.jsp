@@ -136,30 +136,31 @@
         .img_tit img {
             max-height: 180px;
         }
-        /*
+
         .tb1 .item1 {
-            width: 8%;
+            width: 10%;
         }
         .tb1 .item2 {
             width: 50%;
             text-align: left;
         }
         .tb1 .item3 {
-            width: 12%;
-        }*/
+            width: 25%;
+            text-align: right;
+        }
 
         /* 기타 버튼 스타일 */
 
         .btn1 {
-            display: block;
             border-radius: 10px;
-            max-width: 120px;
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 100px;
             text-align: center;
             background-color: #527AF2;
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin-bottom: 10px;
         }
 
         .btn1:hover {
@@ -212,91 +213,62 @@
                 <table class="tb1" id="myTable">
                     <thead>
                     <tr>
-                        <th></th>
-                        <th>정보</th>
-                        <th>가격</th>
-                        <th>출간일</th>
-                        <th>비고</th>
+                        <th class="item1">연번</th>
+                        <th class="item2">상품명</th>
+                        <th class="item1">수량</th>
+                        <th class="item3">비고</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="pro" items="${proList }">
+                    <c:forEach var="cart" items="${cartList }" varStatus="status">
                         <tr>
-                            <td>
-                                <div class="img_tit"><img src="${path }/storage/${pro.imgSrc1 }"/></div>
+                            <td class="item1">
+                                <span>${status.count }</span>
                             </td>
-                            <td>
-                                <div>
-                                    ${pro.cate }
-                                </div>
-                                <div>
-                                    ${pro.pname}
-                                </div>
-                                <div>
-                                    ${pro.plist}
-                                </div>
+                            <td class="item2">
+                                <span title="${cart.pno}">${cart.pname }</span>
                             </td>
-                            <td>
-                                <div>${pro.price}</div>
+                            <td class="item1">
+                                ${cart.amount }
                             </td>
-                            <td>
-                                <div>${pro.resdate}</div>
-                            </td>
-                            <td>
-                                <div>
-                                    <a href="${path}/Product.do?no=${pro.no}" class="btn1">상세보기</a>
-                                </div>
-                                <c:if test="${not empty sid}">
-                                    <div>
-                                        <a href="${path }/AddCart.do?pno=${pro.no }" class="btn1">장바구니</a>
-                                    </div>
-                                    <div>
-                                        <a href="${path }/AddPayment.do?pno=${pro.no }" class="btn1">구매하기</a>
-                                    </div>
-                                </c:if>
+                            <td class="item3">
+                                <a href="${path }/AddPayment.do?pno=${cart.pno }&from=cart" class="btn1">구매</a>
+                                <a href="${path}/DelCart.do?cartno=${cart.cartno }&from=cart" class="btn1">제거</a>
                             </td>
                         </tr>
                     </c:forEach>
                     </tbody>
                 </table>
-                <script>
-                    $(document).ready( function () {
-                        $('#myTable').DataTable({
-                            pageLength : 5,
-                            order: [[3, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
-                            info: false,
-                            dom: 't<f>p',
-                            language: {
-                                emptyTable: '작성된 글이 없습니다.'
-                            }
-
-                        });
-                    } );
-                    $(document).ready(function() {
-                        $('.dataTables_paginate').css({
-                            'textAlign':'left',
-                            'float': 'none',
-                            'margin-top':'10px',
-                        });
-                        $('.dataTables_filter').css({
-                            'float': 'left',
-                            'margin-top':'14px',
-                            'margin-right':'280px'
-                        });
-                        $('#myTable_paginate').css({
-                            'margin-right':'100px'
-                        });
-
+            </div>
+            <script>
+                $(document).ready( function () {
+                    $('#myTable').DataTable({
+                        pageLength : 5,
+                        order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
+                        info: false,
+                        dom: 't<f>p',
+                        language: {
+                            emptyTable: '작성된 글이 없습니다.'
+                        }
 
                     });
-
-                </script>
-                <div class="btn_group">
-                    <c:if test="${sid eq 'admin' }">
-                        <a href="${path}/AddProduct.do" class="inbtn">상품 추가</a>
-                    </c:if>
-                </div>
-            </div>
+                } );
+                $(document).ready(function() {
+                    $('.dataTables_paginate').css({
+                        'textAlign':'left',
+                        'float': 'none',
+                        'margin-top':'10px',
+                    });
+                    $('.dataTables_filter').css({
+                        'float': 'left',
+                        'margin-top':'14px',
+                        'margin-right':'280px'
+                    });
+                    $('#myTable_paginate').css({
+                        'margin-right':'100px'
+                    });
+                });
+            </script>
         </section>
     </div>
     <footer class="ft" id="ft">

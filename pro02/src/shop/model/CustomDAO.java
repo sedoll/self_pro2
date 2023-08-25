@@ -3,6 +3,7 @@ package shop.model;
 
 
 import shop.dto.Custom;
+import shop.util.AES256;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,6 +16,7 @@ public class CustomDAO {
     static Connection conn = null;
     static PreparedStatement pstmt = null;
     static ResultSet rs = null;
+    static String key = "%02x";
 
     public List<Custom> getCustomList() {
         List<Custom> cusList = new ArrayList<>();
@@ -48,13 +50,21 @@ public class CustomDAO {
         Custom custom = new Custom();
         DBConnect con = new MariaDBCon();
         conn = con.connect();
+        String qpw = "";
         try {
             pstmt = conn.prepareStatement(DBConnect.CUSTOM_SELECT_ONE);
             pstmt.setString(1,id);
             rs = pstmt.executeQuery();
             if(rs.next()) {
                 custom.setId(rs.getString("id"));
-                custom.setPw(rs.getString("pw"));
+
+                try {
+                    qpw = AES256.decryptAES256(rs.getString("pw"), key);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+                custom.setPw(qpw);
                 custom.setName(rs.getString("name"));
                 custom.setPoint(rs.getInt("point"));
                 custom.setGrade(rs.getString("grade"));
@@ -75,14 +85,26 @@ public class CustomDAO {
     public boolean login(String id, String pw) {
         boolean pass = false;
         DBConnect con = new MariaDBCon();
-        conn = con.connect();
+        String qpw = "";
+
         try {
+            conn = con.connect();
             pstmt = conn.prepareStatement(DBConnect.CUSTOM_SELECT_LOG);
             pstmt.setString(1, id);
-            pstmt.setString(2, pw);
             rs = pstmt.executeQuery();
-            if(rs.next()) {
-                pass = true;
+            if(rs.next()){
+                try {
+                    qpw = AES256.decryptAES256(rs.getString("pw"), key);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+                if(pw.equals(qpw)){
+                    pass = true;
+                } else {
+                    pass = false;
+                }
+            } else {
+                pass = false;
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

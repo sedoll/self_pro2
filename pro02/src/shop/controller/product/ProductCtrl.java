@@ -28,7 +28,7 @@ public class ProductCtrl extends HttpServlet {
         List<Review> revList = dao2.getReviewList(no);
         System.out.println(revList.toString());
         request.setAttribute("revList", revList);
-        RequestDispatcher view = request.getRequestDispatcher("/product/getProduct.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("/product/addPayment.jsp");
         view.forward(request, response);
     }
 }

@@ -150,15 +150,32 @@
             text-align: center;
         }
 
+        .btn1 {
+            display: block;
+            border-radius: 10px;
+            max-width: 120px;
+            text-align: center;
+            background-color: #527AF2;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn1:hover {
+            background-color: #666666;
+        }
+
         .inbtn, .delete_btn {
             display: inline-block;
             border-radius: 5px;
-            width: 50px;
+            max-width: 100px;
             line-height: 28px;
             text-align: center;
             font-size: 14px;
             cursor: pointer;
             transition: background-color 0.3s; /* 마우스 오버 효과 */
+            padding: 7px 15px;
         }
 
         .inbtn {
@@ -188,10 +205,7 @@
         }
 
         #ans_btn {
-
-            border-radius: 5px;
-            width: 80px; /* 버튼 크기  */
-            padding: 7px 15px;
+            border-radius: 5px; /* 버튼 크기  */
             text-align: center;
         }
 
@@ -329,7 +343,10 @@
                     </tbody>
                 </table>
                 <c:if test="${not empty sid }">
-                    <a href="${path }/AddPayment.do?pno=${pro.no }">구매하기</a>
+                    <div class="btn-submit">
+                        <a href="${path }/AddPayment.do?pno=${pro.no }" class="inbtn">구매하기</a>
+                        <a href="${path }/AddCart.do?pno=${pro.no }" class="inbtn">장바구니</a>
+                    </div>
                 </c:if>
                 <table class="tb2" id="myTable">
                     <thead>
