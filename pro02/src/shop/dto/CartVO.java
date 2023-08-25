@@ -6,6 +6,7 @@ public class CartVO {
     private String name;     //고객명
     private int pno;        //제품번호
     private String pname;   //제품번호
+    private String img1; // 제품 이미지
     private int amount;     //제품수량
 
     public int getCartno() {
@@ -56,6 +57,14 @@ public class CartVO {
         this.pname = pname;
     }
 
+    public String getImg1() {
+        return img1;
+    }
+
+    public void setImg1(String img1) {
+        this.img1 = img1;
+    }
+
     @Override
     public String toString() {
         return "CartVO{" +
@@ -64,6 +73,7 @@ public class CartVO {
                 ", name='" + name + '\'' +
                 ", pno=" + pno +
                 ", pname='" + pname + '\'' +
+                ", img1='" + img1 + '\'' +
                 ", amount=" + amount +
                 '}';
     }

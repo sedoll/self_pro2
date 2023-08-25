@@ -1,6 +1,4 @@
 
-C
-web/WEB-INF/web.xml,c\d\cdcc12da5c4054f6995aab32914d7e0243194c05
 B
 web/css/common.css,5\a\5a70d055aac54fd64871807275975852a461081b
 =
@@ -45,8 +43,6 @@ I
 src/shop/dto/Product.java,d\e\deed1a5704bc52066ffade0647ae1ea0bb9022a8
 `
 0src/shop/controller/admin/AddProductProCtrl.java,2\e\2eb622c40c37bc1031357d4de05e0bdaa8cec21e
-E
-web/WEB-INF/index.jsp,6\2\629f349cba3b679de4d2e2211d6e7e6f6131c0ad
 `
 0src/shop/controller/notice/AddNoticeProCtrl.java,3\a\3a65ed402a5487c262d6a2408d0f0407211c3880
 `
@@ -67,8 +63,6 @@ C
 web/qna/qnaList.jsp,5\8\58d1f29887eac3103fe50001cbc39d3dedecb172
 P
  web/WEB-INF/admin/addProduct.jsp,0\d\0d67ee1045bae28049ac5f9d01acdae62c07286d
-O
-web/WEB-INF/admin/addNotice.jsp,c\3\c34b7678744fbf1c1acecc699d552e176dc220db
 L
 web/WEB-INF/admin/manage.jsp,5\0\50c07f887ec41416daaedae9a94ac27a96c08e9c
 R

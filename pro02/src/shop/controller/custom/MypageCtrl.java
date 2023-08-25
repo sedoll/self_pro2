@@ -25,7 +25,7 @@ public class MypageCtrl extends HttpServlet {
 
         System.out.println(cus.toString());
         request.setAttribute("cus", cus);
-        
+
         RequestDispatcher view = request.getRequestDispatcher("/custom/mypage.jsp");
         view.forward(request, response);
     }

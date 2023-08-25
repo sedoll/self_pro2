@@ -7,6 +7,9 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.SQLException" %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:set var="path" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,18 +20,18 @@
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
     <!-- 웹 폰트 -->
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="${path}/css/font.css">
 
     <!-- css 모듈화 -->
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/hd.css">
-    <link rel="stylesheet" href="./css/ft.css">
-    <link rel="stylesheet" href="./css/change_img.css">
-    <link rel="stylesheet" href="./css/slidebox.css">
+    <link rel="stylesheet" href="${path}/css/common.css">
+    <link rel="stylesheet" href="${path}/css/hd.css">
+    <link rel="stylesheet" href="${path}/css/ft.css">
+    <link rel="stylesheet" href="${path}/css/change_img.css">
+    <link rel="stylesheet" href="${path}/css/slidebox.css">
 
     <style>
-        .img_box li.item1 .bg_box { background-image: url("./img/007.png");}
-        .img_box li.item2 .bg_box { background-image: url("./img/008.png");}
+        .img_box li.item1 .bg_box { background-image: url("${path}/img/006.png");}
+        .img_box li.item2 .bg_box { background-image: url("${path}/img/008.png");}
 
         .page {clear: both; width: 100vw; height: 100vh; position: relative;}
         .page::after {content: ""; display: block; width: 100vw; clear: both;}
@@ -44,10 +47,10 @@
         .pic_lst li a { display: block; width: 256px; height: 376px; margin: 11px;}
         .pic_lst li a:hover {border: 1px solid #fff; transition: 0.3s;}
         .pic_lst li:first-child {margin-left: 0;} /* 안쪽에만 마진이 있으므로 테두리 부분의 마진 제거*/
-        pic_lst li.item1 { background-image: url("./img/img_social_main01.jpg");}
-        .pic_lst li.item2 { background-image: url("./img/img_social_main02.jpg");}
-        .pic_lst li.item3 { background-image: url("./img/img_social_main03.jpg");}
-        .pic_lst li.item4 { background-image: url("./img/img_social_main04.jpg");}
+        pic_lst li.item1 { background-image: url("${path}/img/img_social_main01.jpg");}
+        .pic_lst li.item2 { background-image: url("${path}/img/img_social_main02.jpg");}
+        .pic_lst li.item3 { background-image: url("${path}/img/img_social_main03.jpg");}
+        .pic_lst li.item4 { background-image: url("${path}/img/img_social_main04.jpg");}
         .pic_lst li:hover { margin-top: -20px; transition: 0.5s; filter: brightness(105%); } /*호버 후 움직여서 밝기*/
         .pic_com {padding-left: 20px; padding-top: 20px; font-size: 14px;}
         .pic_tit {padding-left: 20px; padding-top: 20px; font-size: 18px;}
@@ -59,12 +62,12 @@
         .pic_lst li:hover .pic_arrow::after {display: block;} /*처음엔 안보였다가 호버하면 화살표 생성 */
 
 
-        .card_lst li.item2 .thumb_box {background-image: url("./img/t1.jpg");}
-        .card_lst li.item3 .thumb_box {background-image: url("./img/t2.jpg");}
-        .card_lst li.item4 .thumb_box {background-image: url("./img/t3.jpg");}
-        .card_lst li.item5 .thumb_box {background-image: url("./img/t4.jpg");}
-        .card_lst li.item6 .thumb_box {background-image: url("./img/t5.jpg");}
-        .card_lst li.item7 .thumb_box {background-image: url("./img/t6.jpg");}
+        .card_lst li.item2 .thumb_box {background-image: url("${path}/img/t1.jpg");}
+        .card_lst li.item3 .thumb_box {background-image: url("${path}/img/t2.jpg");}
+        .card_lst li.item4 .thumb_box {background-image: url("${path}/img/t3.jpg");}
+        .card_lst li.item5 .thumb_box {background-image: url("${path}/img/t4.jpg");}
+        .card_lst li.item6 .thumb_box {background-image: url("${path}/img/t5.jpg");}
+        .card_lst li.item7 .thumb_box {background-image: url("${path}/img/t6.jpg");}
 
 
         .ico.item1 {background-position: -70px -60px;} /*네이버 블로그 아이콘*/
@@ -112,20 +115,6 @@
         .tb1 td {
             line-height: 34px;
             border-bottom: 1px solid #d2d2d2;
-        }
-        .tb1 .item1 {
-            width: 70%;
-            text-align: left;
-            padding-left: 20px;
-
-        }
-        .tb1 .item2 {
-            width: 15%;
-            text-align: center;
-        }
-        .tb1 .item3 {
-            width: 15%;
-            text-align: center;
         }
     </style>
 </head>

@@ -232,8 +232,8 @@
                                 ${cart.amount }
                             </td>
                             <td class="item3">
-                                <a href="${path }/AddPayment.do?pno=${cart.pno }&from=cart" class="btn1">구매</a>
-                                <a href="${path}/DelCart.do?cartno=${cart.cartno }&from=cart" class="btn1">제거</a>
+                                <a href="${path}/AddPayment.do?pno=${cart.pno}&from=cart" class="btn1">구매</a>
+                                <a href="${path}/DelCart.do?cartno=${cart.cartno}&from=cart" class="btn1">제거</a>
                             </td>
                         </tr>
                     </c:forEach>
