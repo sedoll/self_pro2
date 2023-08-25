@@ -23,8 +23,6 @@ c
 -src/shop/controller/admin/UpdProductCtrl.java,6\7\6744e09a5055d96869bdd493e80d0f6e8b77257a
 ]
 -src/shop/controller/notice/AddNoticeCtrl.java,f\0\f000dd87c0acaa105fc4a06c7d9fdb73c0e14c9f
-]
--src/shop/controller/admin/AddProductCtrl.java,3\c\3c5c0af8ffee136b3901967029397dfe52ffbbb3
 _
 /src/shop/controller/admin/DeleteCustomCtrl.java,a\5\a5708366d3458b574ca1f36a798dd5a54c0bba7c
 ]
@@ -39,10 +37,6 @@ M
 src/shop/controller/Main.java,5\b\5b867d3af8a586eee1d2df1ed3214ad09cc699e6
 T
 $src/shop/controller/board/Board.java,f\f\ff3e214cc8431e0b5be43eb1ad970ea11ae0cd6a
-I
-src/shop/dto/Product.java,d\e\deed1a5704bc52066ffade0647ae1ea0bb9022a8
-`
-0src/shop/controller/admin/AddProductProCtrl.java,2\e\2eb622c40c37bc1031357d4de05e0bdaa8cec21e
 `
 0src/shop/controller/notice/AddNoticeProCtrl.java,3\a\3a65ed402a5487c262d6a2408d0f0407211c3880
 `
@@ -61,8 +55,6 @@ M
 src/shop/model/NoticeDAO.java,7\9\7903f3a26810e9b7d1eb7bdf8dbd97b01c99ecb5
 C
 web/qna/qnaList.jsp,5\8\58d1f29887eac3103fe50001cbc39d3dedecb172
-P
- web/WEB-INF/admin/addProduct.jsp,0\d\0d67ee1045bae28049ac5f9d01acdae62c07286d
 L
 web/WEB-INF/admin/manage.jsp,5\0\50c07f887ec41416daaedae9a94ac27a96c08e9c
 R

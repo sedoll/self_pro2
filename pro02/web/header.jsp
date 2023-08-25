@@ -63,6 +63,7 @@
                     <a href="${path2}/Mypage.do" class="dp1">마이페이지</a>
                     <ul class="sub">
                         <li><a href="${path2}/CartList.do">장바구니</a></li>
+                        <li><a href="${path2}/PaymentList.do">결제내역</a></li>
                     </ul>
                 </li>
             </c:if>

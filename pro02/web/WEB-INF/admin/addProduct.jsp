@@ -109,7 +109,11 @@
                         <tbody>
                         <tr>
                             <th>카테고리</th>
-                            <td colspan="2"><input type="text" name="cate" id="cate" class="indata" placeholder="카테고리 입력" autofocus required></td>
+                            <td colspan="2"><select name="cate" id="cate" class="form-control" class="indata" autofocus required>
+                                <option value="초등" selected>초등</option>
+                                <option value="중등">중등</option>
+                                <option value="고등">고등</option>
+                            </select></td>
                         </tr>
                         <tr>
                             <th>상품 이름</th>
@@ -122,10 +126,6 @@
                         <tr>
                             <th>상품 목차</th>
                             <td colspan="2"> <textarea name="plist" id="plistt" cols="50" rows="8" placeholder="상품 목차 입력" required></textarea></td>
-                        </tr>
-                        <tr>
-                            <th>상품 수량</th>
-                            <td colspan="2"><input type="text" name="pqty" id="pqty" class="indata" placeholder="상품 수량 입력" required></td>
                         </tr>
                         <tr>
                             <th>상품 가격</th>
@@ -141,8 +141,9 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" value="글쓰기" class="inbtn">
+                                <input type="submit" value="상품등록" class="inbtn">
                                 <input type="reset" value="취소" class="inbtn" onclick="window.history.back();">
+                                <a href="${path}/ProList.do" class="btn btn-primary">상품목록</a>
                             </td>
                         </tr>
                         </tbody>

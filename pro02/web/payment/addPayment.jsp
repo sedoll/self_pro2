@@ -313,18 +313,18 @@
                             <td><pre>${pro.plist }</pre></td>
                         </tr>
                         <tr>
-                            <th>가격</th>
+                            <th>가격 (부가세 10% 별도)</th>
                             <td>
                                 <%-- 여기에서 원가에 *1.35를 하므로 기존 가격보다 더 비쌈 --%>
-                                ${pro.price*1.35 }
-                                <input type="hidden" name="sprice" id="sprice" value="${pro.price*1.35 }">
+                                ${pro.price*1.1 }
+                                <input type="hidden" name="sprice" id="sprice" value="${pro.price*1.1 }">
                             </td>
                         </tr>
                         <tr>
-                            <th>구매 수량</th>
+                            <th>구매 수량 (남은 재고 : ${amount})</th>
                             <td>
                                 <input type="hidden" name="pno" id="pno" value="${pro.no }" />
-                                <input type="number" name="amount" id="amount" class="form-control" min="1" value="1" max="${amount }" />
+                                <input type="number" name="amount" id="amount" class="form-control" min="1" value="1" max="${amount}" />
                             </td>
                         </tr>
                         </tbody>
@@ -387,16 +387,17 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="button" id="pay" value="결재" class="btn btn-primary">
+                                <input type="button" id="pay" value="결재" class="inbtn">
                             </td>
                         </tr>
                         </tbody>
                     </table>
                     <div class="btn-wrap container">
                         <c:if test="${!empty sid }">
-                            <input type="submit" class="btn btn-primary" value="구매">
+                            <input type="submit" class="inbtn" value="구매">
                         </c:if>
-                        <a href="${path }/ProList.do" class="btn btn-primary">제품 목록</a>
+                        <a href="${path }/ProList.do" class="inbtn">제품 목록</a>
+                        <p id="paymentResult" style="color:red; font-size: 20px;"></p>
                     </div>
                 </form>
                 <script>
@@ -514,6 +515,7 @@
                 <script>
                     function payCheck(f){
                         var payCk = f.payCk.value;
+                        console.log(payCk);
                         if(payCk!="yes"){
                             alert("아직 결제 전 입니다.");
                             return false;

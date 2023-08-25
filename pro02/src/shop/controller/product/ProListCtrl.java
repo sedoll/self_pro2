@@ -23,7 +23,7 @@ public class ProListCtrl extends HttpServlet {
         List<Product> proList = new ArrayList<>();
 
         String cate = request.getParameter("cate");
-
+        System.out.println(cate);
         if(cate == null) {
             proList = dao.getProductList();
             System.out.println(proList.toString());

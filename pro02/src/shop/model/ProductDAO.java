@@ -1,7 +1,9 @@
 package shop.model;
 
+import shop.dto.Category;
 import shop.dto.Fileud;
 import shop.dto.Product;
+import shop.dto.Receive;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,7 +35,6 @@ public class ProductDAO {
                 pro.setPname(rs.getString("pname"));
                 pro.setPcomment(rs.getString("pcomment"));
                 pro.setPlist(rs.getString("plist"));
-                pro.setPqty(rs.getInt("pqty"));
                 pro.setPrice(rs.getInt("price"));
                 pro.setImgSrc1(rs.getString("imgsrc1"));
 
@@ -68,7 +69,6 @@ public class ProductDAO {
                 pro.setPname(rs.getString("pname"));
                 pro.setPcomment(rs.getString("pcomment"));
                 pro.setPlist(rs.getString("plist"));
-                pro.setPqty(rs.getInt("pqty"));
                 pro.setPrice(rs.getInt("price"));
                 pro.setImgSrc1(rs.getString("imgsrc1"));
 
@@ -103,7 +103,6 @@ public class ProductDAO {
                 pro.setPname(rs.getString("pname"));
                 pro.setPcomment(rs.getString("pcomment"));
                 pro.setPlist(rs.getString("plist"));
-                pro.setPqty(rs.getInt("pqty"));
                 pro.setPrice(rs.getInt("price"));
                 pro.setImgSrc1(rs.getString("imgsrc1"));
                 pro.setImgSrc2(rs.getString("imgsrc2"));
@@ -123,22 +122,20 @@ public class ProductDAO {
         return pro;
     }
 
-    public int updProduct(Product pro){
+    public int addProduct(Product pro){
         int cnt = 0;
         DBConnect con = new MariaDBCon();
-        String sql = DBConnect.PRODUCT_RECEIVE;
+        String sql = DBConnect.PRODUCT_INSERT;
         try {
             conn = con.connect();
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, pro.getCate());
-            pstmt.setString(2, pro.getCate());
-            pstmt.setString(3, pro.getPname());
-            pstmt.setString(4, pro.getPcomment());
-            pstmt.setString(5, pro.getPlist());
-            pstmt.setInt(6, pro.getPqty());
-            pstmt.setInt(7, pro.getPrice());
-            pstmt.setString(8, pro.getImgSrc1()); // 이미지
-            pstmt.setString(9, pro.getImgSrc2()); // 소개영상
+            pstmt.setString(2, pro.getPname());
+            pstmt.setString(3, pro.getPcomment());
+            pstmt.setString(4, pro.getPlist());
+            pstmt.setInt(5, pro.getPrice());
+            pstmt.setString(6, pro.getImgSrc1()); // 이미지
+            pstmt.setString(7, pro.getImgSrc2()); // 소개영상
             cnt = pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -169,26 +166,61 @@ public class ProductDAO {
         return cnt;
     }
 
-    public int getAmount(int no) {
-        int amount = 1;
-        /*
+    public List<Category> getCategoryList(){
+        List<Category> cateList = new ArrayList<Category>();
         DBConnect con = new MariaDBCon();
-        String sql = DBConnect.PRODUCT_SELECT_ONE;
+        conn = con.connect();
         try {
-            conn = con.connect();
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, no);
+            pstmt = conn.prepareStatement(DBConnect.CATEGORY_LOAD);
             rs = pstmt.executeQuery();
-            if(rs.next()) {
-                amount = rs.getInt("pqty");
+            while(rs.next()){
+                Category cate = new Category();
+                cate.setCno(rs.getString("cno"));
+                cate.setCname(rs.getString("cname"));
+                cateList.add(cate);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        } catch (Exception e) {
+        } finally {
+            con.close(pstmt, conn);
+        }
+        return cateList;
+    }
+
+    public int getAmount(int pno){
+        int amount = 0;
+        DBConnect con = new MariaDBCon();
+        try {
+            conn = con.connect();
+            pstmt = conn.prepareStatement(DBConnect.INVENTORY_SELECT_ONE);
+            pstmt.setInt(1, pno);
+            rs = pstmt.executeQuery();
+            if(rs.next()){
+                amount = rs.getInt("amount");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            con.close(rs, pstmt, conn);
+        }
+        return amount;
+    }
+
+    public int addReceive(Receive rec){
+        int cnt = 0;
+        DBConnect con = new MariaDBCon();
+        conn = con.connect();
+        try {
+            pstmt = conn.prepareStatement(DBConnect.RECEIVE_INSERT);
+            pstmt.setInt(1, rec.getPno());
+            pstmt.setInt(2, rec.getAmount());
+            pstmt.setInt(3, rec.getRprice());
+            cnt = pstmt.executeUpdate();
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
             con.close(pstmt, conn);
-        }*/
-        return amount;
+        }
+        return cnt;
     }
 }

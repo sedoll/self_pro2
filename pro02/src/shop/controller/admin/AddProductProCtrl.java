@@ -37,7 +37,6 @@ public class AddProductProCtrl extends HttpServlet {
             pro.setPname(mr.getParameter("pname"));
             pro.setPcomment(mr.getParameter("pcomment"));
             pro.setPlist(mr.getParameter("plist"));
-            pro.setPqty(Integer.parseInt(mr.getParameter("pqty")));
             pro.setPrice(Integer.parseInt(mr.getParameter("price")));
             pro.setImgSrc1(mr.getParameter("imgsrc1"));
             pro.setImgSrc2(mr.getParameter("imgsrc2"));
@@ -79,7 +78,7 @@ public class AddProductProCtrl extends HttpServlet {
             /*
             pro.setImgSrc1(upfile.get);
             file.setFilename(upfile.getName());*/
-            int cnt = dao.updProduct(pro);
+            int cnt = dao.addProduct(pro);
             if(cnt > 0) {
                 System.out.println("db 업로드 완료");
             }

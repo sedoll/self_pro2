@@ -40,6 +40,7 @@ public interface DBConnect {
     final static String PRODUCT_SELECT_RECENT = "SELECT * FROM product ORDER BY NO DESC LIMIT 5"; // 최근 상품 조회
     final static String PRODUCT_SELECT_BEST = "SELECT * from product where pno IN (SELECT pno FROM payment GROUP BY pno ORDER BY SUM(amount) DESC LIMIT 5)"; // 제일 잘나가는 상품 조회
     final static String PRODUCT_DELETE = "delete from product where no=?";
+    final static String PRODUCT_INSERT = "INSERT INTO product VALUES(DEFAULT, ?, '', ?, ?, ?, ?, ?, ?, '', DEFAULT)";
 
 
     // qna
@@ -60,7 +61,7 @@ public interface DBConnect {
     
     
     //입고처리패턴
-    final static String PRODUCT_RECEIVE = "INSERT INTO product VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, '', DEFAULT)";
+    final static String PRODUCT_RECEIVE = "insert into receive values (default, ?, ?, ?, default)";
     final static String CATEGORY_LOAD = "SELECT * FROM CATEGORY";
 
 

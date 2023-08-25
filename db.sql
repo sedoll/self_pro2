@@ -61,7 +61,7 @@ CREATE TABLE FILE2(
 	fname3 VARCHAR(500)
 );
 
--- 구매 관련 테이블
+DROP TABLE product;
 
 -- 상품
 CREATE TABLE product(
@@ -69,10 +69,9 @@ CREATE TABLE product(
 	cate VARCHAR(50) NOT null,
 	cateno VARCHAR(20) NOT null,
 	pname VARCHAR(100) NOT null,
-	pcomment VARCHAR(1000),
-	plist VARCHAR(200),
-	pqty INT,
-	price INT,
+	pcomment VARCHAR(2000) NOT null,
+	plist VARCHAR(2000),
+	price INT DEFAULT 1000,
 	imgsrc1 VARCHAR(300),
 	imgsrc2 VARCHAR(300),
 	imgsrc3 VARCHAR(300),
@@ -185,8 +184,22 @@ create table cart(
 		CASCADE
 );
 
--- 재고뷰
--- CREATE VIEW inventory;
+-- 재고 처리 뷰 생성
+
+DROP VIEW inventory;
+
+CREATE VIEW inventory AS
+SELECT r.pno AS pno, (r.total_receive - COALESCE(s.total_serve, 0)) AS amount
+FROM (
+    SELECT pno, SUM(amount) AS total_receive
+    FROM receive
+    GROUP BY pno
+) r
+LEFT JOIN (
+    SELECT pno, SUM(amount) AS total_serve
+    FROM serve
+    GROUP BY pno
+) s ON r.pno = s.pno;
 
 -- 상품등록
 INSERT INTO product VALUES(DEFAULT, ?, '', ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT);
