@@ -102,6 +102,7 @@ public interface DBConnect {
     final static String PAYMENT_SELECT_LIST ="select * from payment order by sno desc";
     final static String PAYMENT_SELECT_ONE ="select * from payment where sno=?";
     final static String PAYMENT_SELECT_CID ="select * from payment where cid=?";
+    final static String PAYMENT_SELECT_CID_PNO ="select * from payment where cid=? and pno=?";
 
     public Connection connect();
     public void close(PreparedStatement pstmt, Connection conn);

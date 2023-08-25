@@ -47,4 +47,15 @@ public class Review {
     public void setResdate(String resdate) {
         this.resdate = resdate;
     }
+
+    @Override
+    public String toString() {
+        return "Review{" +
+                "no=" + no +
+                ", cid='" + cid + '\'' +
+                ", content='" + content + '\'' +
+                ", par=" + par +
+                ", resdate='" + resdate + '\'' +
+                '}';
+    }
 }

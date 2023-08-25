@@ -358,18 +358,17 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="lev" items="${levList }">
+                    <c:forEach var="lev" items="${revList }">
                     <tr>
                         <td class="item1">${lev.cid}</td>
-                        <td class="item2">${lev.contnet}</td>
-                        <td class="item3">${lev.date}</td>
+                        <td class="item2">${lev.content}</td>
+                        <td class="item3">${lev.resdate}</td>
                         <td class="item4">
-<%--                            0813 댓글 수정버튼 표시안되어 코드 수정. by 백준철--%>
-                        <c:if test="sid eq lev.cid">
-                            <a href="${path}/updateAns.jsp&lev=1" class="inbtn">수정</a>
-                            <a href="${path}/deleteBoardpro.jsp&lev=1" class="inbtn delete_btn"> 삭제 </a>
-                        </c:if>
-                    </td>
+                            <c:if test="${sid eq lev.cid}">
+                                <a href="${path}/updateAns.jsp&lev=1" class="inbtn">수정</a>
+                                <a href="${path}/deleteBoardpro.jsp&lev=1" class="inbtn delete_btn"> 삭제 </a>
+                            </c:if>
+                        </td>
                     </tr>
                     </c:forEach>
                     </tbody>
@@ -389,7 +388,7 @@
                             info: false,
 
                             language: {
-                                emptyTable: '작성된 댓글이 없습니다.'
+                                emptyTable: '작성된 후기가 없습니다.'
                             }
                         });
                         $('#myTable').css({
@@ -402,7 +401,7 @@
                     <table class="tb3">
                         <tbody>
                         <tr>
-                            <c:if test="${not empty sid}">
+                            <c:if test="${check == '1'}">
                                 <th>${sid}</th>
                                 <th><textarea name="content" id="content" cols="100" rows="5" placeholder="리뷰 작성" required ></textarea></th>
                                 <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>

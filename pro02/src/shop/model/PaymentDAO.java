@@ -141,6 +141,26 @@ public class PaymentDAO {
         return pay;
     }
 
+    public int getPaymentBuyCustom(int pno, String cid) {
+        int check = 0;
+        DBConnect con = new MariaDBCon();
+        conn = con.connect();
+        try {
+            pstmt = conn.prepareStatement(DBConnect.PAYMENT_SELECT_CID_PNO);
+            pstmt.setString(1,cid);
+            pstmt.setInt(2, pno);
+            rs = pstmt.executeQuery();
+            if(rs.next()) {
+                check = 1;
+                System.out.println(cid + "는 " + pno + " 상품을 구매한 유저 입니다.");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return check;
+    }
+
+
     public List<PaymentVO> getCidPaymentList(String cid){
         List<PaymentVO> payList = new ArrayList<>();
         DBConnect con = new MariaDBCon();

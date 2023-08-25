@@ -39,7 +39,9 @@ public class ReviewDAO {
                 String date = ymd.format(d);
                 rv.setResdate(date);
                 revList.add(rv);
+                System.out.println(rv.toString());
             }
+            System.out.println("리뷰 추출 완료");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ParseException e) {
