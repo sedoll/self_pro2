@@ -1,0 +1,80 @@
+
+`	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112t"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112¢"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+h	java:S112·"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ìá£Ú¢1
+h	java:S112Ê"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ìá£Ú¢1
+h	java:S112Ü"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ìá£Ú¢1
+|
+java:S2293ª"YReplace the type specification in this constructor call with the diamond operator ("<>").(“…Ëˆüÿÿÿÿ8Ìá£Ú¢1
+\
+java:S1192%"FDefine a constant instead of duplicating this literal "plist" 3 times.(³¬å
+a
+java:S1192&"FDefine a constant instead of duplicating this literal "price" 3 times.(²’Æ«ıÿÿÿÿ
+d
+java:S1192$"IDefine a constant instead of duplicating this literal "pcomment" 3 times.(ÃüåÈÿÿÿÿÿ
+\
+java:S1192#"FDefine a constant instead of duplicating this literal "pname" 3 times.(ô€Ñî
+d
+java:S1192"IDefine a constant instead of duplicating this literal "yy-MM-dd" 3 times.(³²–Õşÿÿÿÿ
+^
+java:S1192)"HDefine a constant instead of duplicating this literal "resdate" 3 times.( ¦ô¥
+^
+java:S1192'"HDefine a constant instead of duplicating this literal "imgsrc1" 3 times.(ò–“Š
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+L
+java:S2696"6Make the enclosing method "static" or remove this set.(ú¡œò
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(­ƒ…Ì
+Q
+java:S2696;"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+Q
+java:S2696>"6Make the enclosing method "static" or remove this set.(¸´Âùÿÿÿÿ
+Q
+java:S2696@"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+N	java:S106Q"9Replace this use of System.out or System.err by a logger.(­ƒ…Ì
+Q
+java:S2696]"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+`
+java:S2147u"ECombine this catch with the one at line 115, which has the same body.(âÃƒŠıÿÿÿÿ
+Q
+java:S2696`"6Make the enclosing method "static" or remove this set.(ÍúŠœüÿÿÿÿ
+Q
+java:S2696b"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+\
+java:S2147"ECombine this catch with the one at line 140, which has the same body.(”ı¾
+R
+java:S2696‚"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+M
+java:S2696ƒ"6Make the enclosing method "static" or remove this set.(Ä×Óù
+\
+java:S2147¡"ECombine this catch with the one at line 159, which has the same body.(”ı¾
+R
+java:S2696›"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+M
+java:S2696œ"6Make the enclosing method "static" or remove this set.(Ä×Óù
+Y
+java:S2696¬"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8ûá£Ú¢1
+Y
+java:S2696®"6Make the enclosing method "static" or remove this set.(±Ÿ‰÷ûÿÿÿÿ8ûá£Ú¢1
+Y
+java:S2696¯"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ8ûá£Ú¢1
+Y
+java:S2696Â"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8ûá£Ú¢1
+T
+java:S2696Ã"6Make the enclosing method "static" or remove this set.(áàÇç8ûá£Ú¢1
+Y
+java:S2696Å"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ8ûá£Ú¢1
+Y
+java:S2696Ô"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8ûá£Ú¢1
+T
+java:S2696Ö"6Make the enclosing method "static" or remove this set.(µ­°¶8ûá£Ú¢1
+N
+java:S1128",Remove this unused import 'shop.dto.Fileud'.(´€¨óûÿÿÿÿ8ƒ¬Û¢1

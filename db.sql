@@ -185,7 +185,6 @@ create table cart(
 );
 
 -- 재고 처리 뷰 생성
-
 DROP VIEW inventory;
 
 CREATE VIEW inventory AS
@@ -200,6 +199,20 @@ LEFT JOIN (
     FROM serve
     GROUP BY pno
 ) s ON r.pno = s.pno;
+
+
+-- 판매량 뷰
+DROP VIEW serve_summary;
+
+CREATE VIEW sales AS
+SELECT
+    s.pno,
+    p.pname,
+    SUM(s.amount) AS total_amount,
+    SUM(s.amount * s.sprice) AS total_cost
+FROM serve s
+JOIN product p ON s.pno = p.no
+GROUP BY s.pno, p.pname;
 
 -- 상품등록
 INSERT INTO product VALUES(DEFAULT, ?, '', ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT);

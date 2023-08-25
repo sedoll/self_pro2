@@ -1,0 +1,110 @@
+
+`	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112œ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112®"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112á"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112«"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+d
+java:S1192"IDefine a constant instead of duplicating this literal "yy-MM-dd" 4 times.(³²–Õşÿÿÿÿ
+m
+java:S1192<"WDefine a constant instead of duplicating this literal "MariaSQL ì—°ê²° ì„±ê³µ" 3 times.(Õğ¾À
+\
+java:S1192""FDefine a constant instead of duplicating this literal "title" 4 times.(ùŠÁø
+^
+java:S1192&"HDefine a constant instead of duplicating this literal "resdate" 4 times.( ¦ô¥
+c
+java:S1192F"HDefine a constant instead of duplicating this literal "content" 3 times.(±êƒ¡øÿÿÿÿ
+^
+java:S2259‘"BA "NullPointerException" could be thrown; "conn" is nullable here.(öõû¿şÿÿÿÿ
+X
+java:S2259d"BA "NullPointerException" could be thrown; "conn" is nullable here.(ğ…Ú
+^
+java:S2259§"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ÿ«Óàûÿÿÿÿ
+X
+java:S2259?"BA "NullPointerException" could be thrown; "conn" is nullable here.(À±´²
+^
+java:S2259Š"BA "NullPointerException" could be thrown; "conn" is nullable here.(×·Â¥úÿÿÿÿ
+_
+java:S2147-"DCombine this catch with the one at line 43, which has the same body.(âÃƒŠıÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+L
+java:S2696"6Make the enclosing method "static" or remove this set.(¤ğ¿Æ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+Q
+java:S2696:"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(Õğ¾À
+_
+java:S2147P"DCombine this catch with the one at line 78, which has the same body.(âÃƒŠıÿÿÿÿ
+L
+java:S2696?"6Make the enclosing method "static" or remove this set.(À±´²
+Q
+java:S2696A"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+Q
+java:S2696^"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+N	java:S106`"9Replace this use of System.out or System.err by a logger.(Õğ¾À
+`
+java:S2147w"ECombine this catch with the one at line 117, which has the same body.(âÃƒŠıÿÿÿÿ
+L
+java:S2696d"6Make the enclosing method "static" or remove this set.(ğ…Ú
+Q
+java:S2696f"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+R
+java:S2696„"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+O	java:S106†"9Replace this use of System.out or System.err by a logger.(Õğ¾À
+a
+java:S2147›"ECombine this catch with the one at line 153, which has the same body.(âÃƒŠıÿÿÿÿ
+R
+java:S2696Š"6Make the enclosing method "static" or remove this set.(×·Â¥úÿÿÿÿ
+R
+java:S2696Œ"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+B
+java:S1481¥"&Remove this unused "q" local variable.(°©ÍËúÿÿÿÿ
+R
+java:S2696¨"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+M
+java:S2696ª"6Make the enclosing method "static" or remove this set.(ˆ…Üß
+?
+java:S1481¬"(Remove this unused "cnt" local variable.(›Ä‹´
+R
+java:S2696¸"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+T
+java:S1117¹"8Rename "conn" which hides the field declared at line 17.(şöì¦ùÿÿÿÿ
+U
+java:S1117º"9Rename "pstmt" which hides the field declared at line 18.(´Ÿ¿½şÿÿÿÿ
+O	java:S106Ç"9Replace this use of System.out or System.err by a logger.(˜Úíµ
+O	java:S106Ê"9Replace this use of System.out or System.err by a logger.(Úâ§¨
+O	java:S106Í"9Replace this use of System.out or System.err by a logger.(ı¤Ú
+?	java:S108Î")Either remove or fill this block of code.(”ı¾
+O	java:S106Û"9Replace this use of System.out or System.err by a logger.(µ¡á×
+T	java:S106Ş"9Replace this use of System.out or System.err by a logger.(úåõãûÿÿÿÿ
+R
+java:S2696ë"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+T
+java:S1117ì"8Rename "conn" which hides the field declared at line 17.(şöì¦ùÿÿÿÿ
+U
+java:S1117í"9Rename "pstmt" which hides the field declared at line 18.(´Ÿ¿½şÿÿÿÿ
+O	java:S106û"9Replace this use of System.out or System.err by a logger.(˜Úíµ
+O	java:S106ı"9Replace this use of System.out or System.err by a logger.(Úâ§¨
+O	java:S106€"9Replace this use of System.out or System.err by a logger.(ı¤Ú
+?	java:S108")Either remove or fill this block of code.(”ı¾
+R
+java:S2696Œ"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(âèÓ„şÿÿÿÿ
+R
+java:S2696‘"6Make the enclosing method "static" or remove this set.(öõû¿şÿÿÿÿ
+R
+java:S2696¢"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+T	java:S106¤"9Replace this use of System.out or System.err by a logger.(Å¥¥ëüÿÿÿÿ
+R
+java:S2696§"6Make the enclosing method "static" or remove this set.(Ÿ«Óàûÿÿÿÿ
+G
+java:S1128",Remove this unused import 'shop.dto.Notice'.(¬¶¯£ıÿÿÿÿ

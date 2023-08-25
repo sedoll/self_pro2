@@ -1,0 +1,52 @@
+
+`	java:S112@"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112N"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112c"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112n"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+h	java:S112›"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8™«±Ô¢1
+h	java:S112°"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…–ÅÔ¢1
+W
+java:S1141="5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8š«±Ô¢1
+W
+java:S1141`"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8…–ÅÔ¢1
+`
+java:S2259¬"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8µ•ãé¡1
+
+java:S4165k"bRemove this useless assignment; "pass" already holds the assigned value along all execution paths.(â÷á‚8àÄ´Ô¢1
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(äñÅíüÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(­ƒ…Ì
+Q
+java:S26964"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+Q
+java:S26967"6Make the enclosing method "static" or remove this set.(‰„Ì‡ÿÿÿÿÿ
+Q
+java:S26969"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+Q
+java:S2696["6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+L
+java:S2696\"6Make the enclosing method "static" or remove this set.(Ã¹å
+Q
+java:S2696^"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ
+Q
+java:S2696x"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+L
+java:S2696z"6Make the enclosing method "static" or remove this set.(Ìæ°­
+O	java:S106‡"9Replace this use of System.out or System.err by a logger.(­ƒ…Ì
+B
+java:S1481"+Remove this unused "custom" local variable.(ãáŸ
+R
+java:S2696’"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ
+R
+java:S2696”"6Make the enclosing method "static" or remove this set.(‰„Ì‡ÿÿÿÿÿ
+Y
+java:S2696–"6Make the enclosing method "static" or remove this set.(Ğî½•ÿÿÿÿÿ8¸«±Ô¢1
+Y
+java:S2696¥"6Make the enclosing method "static" or remove this set.(¬˜ö×ùÿÿÿÿ8¹«±Ô¢1
+T	java:S106§"9Replace this use of System.out or System.err by a logger.(ÿ½œÌøÿÿÿÿ
+T
+java:S2696¬"6Make the enclosing method "static" or remove this set.(Ä×Óù8¹«±Ô¢1

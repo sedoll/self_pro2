@@ -202,4 +202,25 @@ public class PaymentDAO {
         Delivery del  = dao.getBySnoDelivery(sno);
         return del.getPstate();
     }
+
+    public List<Sales> getSales() {
+        List<Sales> salesList = new ArrayList<>();
+        DBConnect con = new MariaDBCon();
+        conn = con.connect();
+        try {
+            pstmt = conn.prepareStatement(DBConnect.SALES_SELECT_ALL);
+            rs = pstmt.executeQuery();
+            while(rs.next()) {
+                Sales s = new Sales();
+                s.setPno(rs.getInt("pno"));
+                s.setCnt(rs.getInt("total_amount"));
+                s.setMoney(rs.getInt("total_cost"));
+                s.setPname(rs.getString("pname"));
+                salesList.add(s);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return salesList;
+    }
 }

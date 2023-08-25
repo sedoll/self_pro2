@@ -105,6 +105,9 @@ public interface DBConnect {
     final static String PAYMENT_SELECT_CID ="select * from payment where cid=?";
     final static String PAYMENT_SELECT_CID_PNO ="select * from payment where cid=? and pno=?";
 
+    // 판매 수익 정보
+    final static String SALES_SELECT_ALL = "select * from sales";
+
     public Connection connect();
     public void close(PreparedStatement pstmt, Connection conn);
     public void close(ResultSet rs, PreparedStatement pstmt, Connection conn);

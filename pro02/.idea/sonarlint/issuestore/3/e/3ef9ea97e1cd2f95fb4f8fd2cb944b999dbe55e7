@@ -1,0 +1,12 @@
+
+{
+java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(‰»çÖÿÿÿÿÿ8ÚÄÙ¢1
+U	java:S106!"9Replace this use of System.out or System.err by a logger.(ÙÌŞ‰8ÛÄÙ¢1
+]	java:S125'"<This block of commented-out lines of code should be removed.(ìøÊíıÿÿÿÿ8Öª‘Ù¢1
+Z	java:S106+"9Replace this use of System.out or System.err by a logger.(èÌç úÿÿÿÿ8òèšÙ¢1
+ƒ
+java:S19894"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Àá‘“ıÿÿÿÿ8ÜÄÙ¢1
+O
+java:S1128"-Remove this unused import 'shop.dto.Payment'.(«ˆÅ‰üÿÿÿÿ8ÜÄÙ¢1
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ÜÄÙ¢1

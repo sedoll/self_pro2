@@ -67,6 +67,16 @@
                     </ul>
                 </li>
             </c:if>
+            <c:if test="${sid eq 'admin'}">
+                <li class="item4">
+                    <a href="/" class="dp1">관리자 페이지</a>
+
+                    <ul class="sub">
+                        <li><a href="${path2}/Manage.do">회원탈퇴</a></li>
+                        <li><a href="${path2}/Sales.do">판매량</a></li>
+                    </ul>
+                </li>
+            </c:if>
         </ul>
     </nav>
     <script src="/js/load.js"></script>
