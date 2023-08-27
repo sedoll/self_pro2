@@ -202,7 +202,7 @@ LEFT JOIN (
 
 
 -- 판매량 뷰
-DROP VIEW serve_summary;
+DROP VIEW sales;
 
 CREATE VIEW sales AS
 SELECT
