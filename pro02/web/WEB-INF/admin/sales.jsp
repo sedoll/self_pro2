@@ -180,9 +180,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="cus" items="${salesList }" >
+                    <c:forEach var="cus" items="${salesList }" varStatus="status" >
                         <tr>
-                            <td class="item1">${cus.pno}</td>
+                            <td class="item1">${status.count}</td>
                             <td class="item2">${cus.pname}</td>
                             <td class="item2">${cus.money}</td>
                             <td class="item2">${cus.cnt}</td>
