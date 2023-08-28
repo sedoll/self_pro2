@@ -122,8 +122,6 @@ J
 G
 web/product/proList.jsp,7\b\7b8f2775d58d68468358c748348869172775e616
 _
-/src/shop/controller/payment/AddPaymentCtrl.java,2\f\2f6032f15b8e6cf27332724c515a718651d32559
-_
 /src/shop/controller/product/AddReceiveCtrl.java,8\b\8ba9c6a02b4f6c86ea60209b1bbb86455a6e86cf
 `
 0src/shop/controller/admin/AddProductProCtrl.java,2\e\2eb622c40c37bc1031357d4de05e0bdaa8cec21e

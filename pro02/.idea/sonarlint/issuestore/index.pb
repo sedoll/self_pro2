@@ -125,8 +125,6 @@ _
 /src/shop/controller/product/AddReceiveCtrl.java,8\b\8ba9c6a02b4f6c86ea60209b1bbb86455a6e86cf
 `
 0src/shop/controller/admin/AddProductProCtrl.java,2\e\2eb622c40c37bc1031357d4de05e0bdaa8cec21e
-_
-/src/shop/controller/payment/AddPaymentCtrl.java,2\f\2f6032f15b8e6cf27332724c515a718651d32559
 X
 (src/shop/controller/admin/SalesCtrl.java,8\6\86506678b49a9fb858f57c35135d16163d22e1d0
 G
