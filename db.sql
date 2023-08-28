@@ -145,7 +145,7 @@ daddr varchar(300) not null,
 custel varchar(13) not null,
 pcom varchar(100),
 ptel varchar(13),
-pstate integer default 0,	
+pstate integer DEFAULT 0,
 sdate timestamp default current_timestamp,
 rdate varchar(13),
 bcode varchar(30),
@@ -213,6 +213,23 @@ SELECT
 FROM serve s
 JOIN product p ON s.pno = p.no
 GROUP BY s.pno, p.pname;
+
+-- 배송 뷰
+
+DROP VIEW delivery_info;
+
+CREATE VIEW delivery_product_amount_info AS
+SELECT
+    d.*,
+    pr.pname,
+    py.amount
+FROM
+    delivery d
+JOIN
+    payment py ON d.sno = py.sno
+JOIN
+    product pr ON py.pno = pr.no;
+
 
 -- 상품등록
 INSERT INTO product VALUES(DEFAULT, ?, '', ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT);
