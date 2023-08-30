@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api1 테스트</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script> 
+</head>
+<body>
+    <h2>파라미터 없이 요청 URL 만을 활용하여 Api 서버로 부터 단순 데이터 받기</h2>
+    <button id="btn1" onclick="test1()">Api1</button>
+    <div id="con"></div>
+    <script>
+        function test1() {
+            $.ajax({
+                url:"http://localhost:8081/pro02/Api1", // 요청 URL
+                type:"post",
+                dataType:"json",
+                success:function(object) {
+                    console.log(object);
+                    $("#con").html(object.result);
+                }
+            })
+        }
+    </script>
+</body>
+</html>
