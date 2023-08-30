@@ -285,3 +285,18 @@ sdate=CURRENT_TIMESTAMP, rdate=?, bcode=? WHERE dno=?;
 -- 도착
 UPDATE delivery SET pcom=?, ptel=?, pstate=2, 
 sdate=CURRENT_TIMESTAMP, rdate=?, bcode=? WHERE dno=?;
+
+
+-- api
+DROP TABLE test1;
+
+CREATE TABLE test1(
+	no VARCHAR(20) PRIMARY KEY,
+	NAME VARCHAR(10),
+	POINT INT
+	);
+	
+INSERT INTO test1 VALUES('1', '이선', '100');
+INSERT INTO test1 VALUES('2', '강감찬', '90');
+INSERT INTO test1 VALUES('3', '이순신', '80');
+INSERT INTO test1 VALUES('4', '단군', '70');
