@@ -1,8 +1,8 @@
-CREATE DATABASE shop;
+CREATE DATABASE self2;
 
-USE shop;
+USE self2;
 
-DROP TABLE custom;
+DROP TABLE self2;
 
 -- 손님 테이블
 CREATE TABLE custom (
@@ -218,7 +218,7 @@ GROUP BY s.pno, p.pname;
 
 DROP VIEW delivery_info;
 
-CREATE VIEW delivery_product_amount_info AS
+CREATE VIEW delivery_info AS
 SELECT
     d.*,
     pr.pname,

@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet("/ProductDel.do")
-public class ProductDelCtrl extends HttpServlet {
+public class DelProductCtrl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int no = Integer.parseInt(request.getParameter("no"));

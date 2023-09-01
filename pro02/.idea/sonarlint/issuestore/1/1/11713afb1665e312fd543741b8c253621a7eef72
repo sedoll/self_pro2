@@ -9,14 +9,14 @@
 P
 java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
 f	java:S116"QRename this field "DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ‡À†
-c	java:S116"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’¹ÁË
+h	java:S116"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¥¶•ûÿÿÿÿ
 d	java:S116	"ORename this field "USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÆûß
 i	java:S116
 "ORename this field "PASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ÿ’Þùÿÿÿÿ
 7
 java:S1170"!Make this final field static too.(ˆ‡À†
-7
-java:S1170"!Make this final field static too.(’¹ÁË
+<
+java:S1170"!Make this final field static too.(¬¥¶•ûÿÿÿÿ
 7
 java:S1170	"!Make this final field static too.(íÆûß
 <
