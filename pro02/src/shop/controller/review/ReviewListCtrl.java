@@ -24,8 +24,8 @@ public class ReviewListCtrl extends HttpServlet {
         List<Review> rvList = new ArrayList<>();
 
         ReviewDAO dao = new ReviewDAO();
-//        rvList = dao.getReviewList(sid);
-//        request.setAttribute("rvList", rvList);
+        rvList = dao.getReviewList(sid);
+        request.setAttribute("rvList", rvList);
         RequestDispatcher view = request.getRequestDispatcher("/custom/revList.jsp");
         view.forward(request, response);
     }

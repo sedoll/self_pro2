@@ -222,6 +222,7 @@ CREATE VIEW delivery_info AS
 SELECT
     d.*,
     pr.pname,
+    pr.no AS pno,
     py.amount
 FROM
     delivery d
@@ -229,7 +230,6 @@ JOIN
     payment py ON d.sno = py.sno
 JOIN
     product pr ON py.pno = pr.no;
-
 
 -- 상품등록
 INSERT INTO product VALUES(DEFAULT, ?, '', ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT);

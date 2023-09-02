@@ -71,6 +71,7 @@
                     <ul class="sub">
                         <li><a href="${path2}/Manage.do">회원탈퇴</a></li>
                         <li><a href="${path2}/Sales.do">판매량</a></li>
+                        <li><a href="${path2}/AdminDeliveryList.do?pstate=0">배송관리</a></li>
                     </ul>
                 </li>
             </c:if>

@@ -23,8 +23,8 @@ public class AdminReviewListCtrl extends HttpServlet {
         List<Review> rvList = new ArrayList<>();
 
         ReviewDAO dao = new ReviewDAO();
-//        rvList = dao.getReviewList();
-//        request.setAttribute("rvList", rvList);
+        rvList = dao.getReviewList();
+        request.setAttribute("rvList", rvList);
         RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/admin/adminRevList.jsp");
         view.forward(request, response);
     }

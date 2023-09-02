@@ -31,19 +31,19 @@ public class UpdateReceiveProCtrl extends HttpServlet {
             rec.setAmount(amount);
 
             int cnt = 0;
-//            cnt = dao.updateReceive(rec);
+            cnt = dao.updateReceive(rec);
             if(cnt > 0) {
                 System.out.println("db 업로드 완료");
                 response.setContentType("text/html; charset=UTF-8");
                 PrintWriter out = response.getWriter();
-                out.println("<script>alert('상품등록이 완료되었습니다.');</script>");
+                out.println("<script>alert('상품추가 등록이 완료되었습니다.');</script>");
                 out.println("<script> location.href= '/pro02/ProList.do'; </script>");
                 out.flush();
 
             }else{
                 response.setContentType("text/html; charset=UTF-8");
                 PrintWriter out = response.getWriter();
-                out.println("<script>alert('상품등록에 실패하였습니다'); location.href='/pro02/UpdateReceive.do';</script>");
+                out.println("<script>alert('상품추가 등록에 실패하였습니다'); location.href='/pro02/UpdateReceive.do';</script>");
                 out.flush();
                 //response.sendRedirect(home+"/AddProduct.do");
 

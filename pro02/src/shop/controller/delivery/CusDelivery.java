@@ -1,6 +1,7 @@
 package shop.controller.delivery;
 
 //import shop.dto.DeliveryInfoView;
+import shop.dto.DeliveryInfoView;
 import shop.model.DeliveryDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -19,10 +20,10 @@ public class CusDelivery extends HttpServlet {
         int sno = Integer.parseInt(request.getParameter("sno"));
 
         DeliveryDAO dao = new DeliveryDAO();
-//        DeliveryInfoView divl = new DeliveryInfoView();
-//        divl = dao.deliveryInfoViewList(sno);
+        DeliveryInfoView divl = new DeliveryInfoView();
+        divl = dao.deliveryInfoViewList(sno);
 
-//        request.setAttribute("deli", divl);
+        request.setAttribute("deli", divl);
         RequestDispatcher view = request.getRequestDispatcher("/delivery/cusDelivery.jsp");
         view.forward(request, response);
     }

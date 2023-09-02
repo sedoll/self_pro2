@@ -31,7 +31,7 @@ public class UpdDeliveryProCtrl extends HttpServlet {
 
         DeliveryDAO dao = new DeliveryDAO();
         int cnt = 0;
-//        cnt = dao.updateDelivery(deli);
+        cnt = dao.updateDelivery(deli);
         if(cnt > 0) {
             System.out.println("배송 정보 수정 완료");
         } else {

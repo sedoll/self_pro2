@@ -25,12 +25,12 @@ public class ReviewDeleteCtrl extends HttpServlet {
         rv.setPar(pno);
 
         ReviewDAO dao = new ReviewDAO();
-////        int cnt = dao.deleteReview(rv);
-//        if(cnt > 0) {
-//            RequestDispatcher view = request.getRequestDispatcher("/Product.do?no="+pno);
-//            view.forward(request, response);
-//        } else {
-//            response.sendRedirect("/pro02");
-//        }
+       int cnt = dao.deleteReview(rv);
+        if(cnt > 0) {
+            RequestDispatcher view = request.getRequestDispatcher("/Product.do?no="+pno);
+            view.forward(request, response);
+        } else {
+            response.sendRedirect("/pro02");
+        }
     }
 }

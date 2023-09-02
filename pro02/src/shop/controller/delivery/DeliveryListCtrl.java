@@ -24,7 +24,7 @@ public class DeliveryListCtrl extends HttpServlet {
         List<Delivery> deliveryList = new ArrayList<>();
         DeliveryDAO dao = new DeliveryDAO();
         int pstate = Integer.parseInt(request.getParameter("pstate"));
-//        deliveryList = dao.getDeliveryList(pstate);
+        deliveryList = dao.getDeliveryList(pstate);
         
         String title = "배송관리";
         

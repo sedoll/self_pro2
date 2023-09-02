@@ -26,11 +26,11 @@ public class ReviewUpdateProCtrl extends HttpServlet {
         rv.setPar(pno);
 
         ReviewDAO dao = new ReviewDAO();
-//        int cnt = dao.updateReview(rv);
-//        if(cnt > 0) {
-//            response.sendRedirect("/pro02/Product.do?no="+pno);
-//        } else {
-//            response.sendRedirect("/pro02");
-//        }
+        int cnt = dao.updateReview(rv);
+        if(cnt > 0) {
+            response.sendRedirect("/pro02/Product.do?no="+pno);
+        } else {
+            response.sendRedirect("/pro02");
+        }
     }
 }

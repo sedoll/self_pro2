@@ -28,21 +28,21 @@ public class ReviewAddCtrl extends HttpServlet {
         rv.setPar(pno);
 
         ReviewDAO dao = new ReviewDAO();
-//        boolean ck = dao.reviewCheck(sid, pno);
-//        if(ck) {
-//            int cnt = dao.addReview(rv);
-//            if(cnt > 0) {
-//                RequestDispatcher view = request.getRequestDispatcher("/Product.do?no="+pno);
-//                view.forward(request, response);
-//            } else {
-//                response.sendRedirect("/pro02");
-//            }
-//        } else {
-//            response.setContentType("text/html; charset=UTF-8");
-//            PrintWriter out = response.getWriter();
-//            out.println("<script>alert('후기를 이미 작성하였습니다.'); location.href='/pro02/Product.do?no="+pno+"';</script>");
-//            out.flush();
-//        }
+        boolean ck = dao.reviewCheck(sid, pno);
+        if(ck) {
+            int cnt = dao.addReview(rv);
+            if(cnt > 0) {
+                RequestDispatcher view = request.getRequestDispatcher("/Product.do?no="+pno);
+                view.forward(request, response);
+            } else {
+                response.sendRedirect("/pro02");
+            }
+        } else {
+            response.setContentType("text/html; charset=UTF-8");
+            PrintWriter out = response.getWriter();
+            out.println("<script>alert('후기를 이미 작성하였습니다.'); location.href='/pro02/Product.do?no="+pno+"';</script>");
+            out.flush();
+        }
 
     }
 }

@@ -20,10 +20,10 @@ public class ReviewUpdateCtrl extends HttpServlet {
         String cid = request.getParameter("cid");
 
         ReviewDAO dao = new ReviewDAO();
-//        Review noti = dao.getReview(no, cid);
+        Review noti = dao.getReview(no, cid);
 
         request.setAttribute("msg", msg);
-//        request.setAttribute("noti", noti);
+        request.setAttribute("noti", noti);
 
         RequestDispatcher view = request.getRequestDispatcher("/product/updateReview.jsp");
         view.forward(request,response);

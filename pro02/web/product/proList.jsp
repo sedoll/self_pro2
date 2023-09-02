@@ -295,6 +295,7 @@
                     <c:if test="${sid eq 'admin' }">
                         <a href="${path}/AddProduct.do" class="inbtn">상품 등록</a>
                         <a href="${path}/AddReceive.do" class="inbtn">상품 입고</a>
+                        <a href="${path}/UpdateReceive.do" class="inbtn">추가 입고</a>
                     </c:if>
                 </div>
             </div>

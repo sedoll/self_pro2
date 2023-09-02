@@ -5,7 +5,7 @@ public class Review {
     private String cid;
     private String content;
     private int par;
-
+    private String pname;
     private String resdate;
 
     public int getNo() {
@@ -46,6 +46,14 @@ public class Review {
 
     public void setResdate(String resdate) {
         this.resdate = resdate;
+    }
+
+    public String getPname() {
+        return pname;
+    }
+
+    public void setPname(String pname) {
+        this.pname = pname;
     }
 
     @Override
