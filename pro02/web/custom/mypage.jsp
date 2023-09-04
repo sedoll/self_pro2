@@ -149,7 +149,7 @@
                 <table class="tb2">
                     <tr>
                         <td colspan="2">
-                            <a href="./modify.jsp" class="inbtn">회원정보수정</a>
+                            <a href="${path}/MypageModify.do?sid=${cus.id}" class="inbtn">회원정보수정</a>
                             <a href="/" class="inbtn">메인화면</a>
                         </td>
                     </tr>

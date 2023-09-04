@@ -18,7 +18,7 @@ public interface DBConnect {
     final static String CUSTOM_SELECT_ALL = "select * from custom order by regdate desc";
     final static String CUSTOM_SELECT_ONE = "select * from custom where id=?";
     final static String CUSTOM_INSERT = "insert into custom values(?, ?, ?, default, default, ?, ?, ?, default, ?)";
-    final static String CUSTOM_UPDATE = "update custom set title=?, content=? where id=?";
+    final static String CUSTOM_UPDATE = "update custom set pw=?, tel=?, email=?, address=?,birth=? where id=?";
     final static String CUSTOM_DELETE = "delete from custom where id=?";
     final static String CUSTOM_SELECT_LOG = "select * from custom where id=?";
     // endregion
@@ -32,13 +32,12 @@ public interface DBConnect {
     // region shop
 
     // product
-    final static String PRODUCT_UPDATE_prono = "UPDATE product SET cateno = CONCAT(cate, NO) WHERE NO=?";
-    final static String PRODUCT_UPDATE = ""; // 상품정보수정
     final static String PRODUCT_SELECT_ALL = "SELECT * FROM product ORDER BY NO"; // 상품 조회
     final static String PRODUCT_SELECT_CATE = "SELECT * FROM product where cate=? ORDER BY NO";
     final static String PRODUCT_SELECT_ONE = "SELECT * FROM product where no=?"; // 상품 상세 조회
     final static String PRODUCT_SELECT_RECENT = "SELECT * FROM product ORDER BY NO DESC LIMIT 5"; // 최근 상품 조회
     final static String PRODUCT_SELECT_BEST = "SELECT * from product where pno IN (SELECT pno FROM payment GROUP BY pno ORDER BY SUM(amount) DESC LIMIT 5)"; // 제일 잘나가는 상품 조회
+    final static String PRODUCT_UPDATE = "update product set pname=?, pcomment=?, plist=?, price=?, cate=? where no=?";
     final static String PRODUCT_DELETE = "delete from product where no=?";
     final static String PRODUCT_INSERT = "INSERT INTO product VALUES(DEFAULT, ?, '', ?, ?, ?, ?, ?, ?, '', DEFAULT)";
 

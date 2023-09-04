@@ -53,6 +53,32 @@ public class ProductDAO {
         return proList;
     }
 
+    public int updateProduct(Product pro){
+        int cnt =0;
+        DBConnect con = new MariaDBCon();
+        conn = con.connect();
+
+        try {
+            pstmt = conn.prepareStatement(DBConnect.PRODUCT_UPDATE);
+            pstmt.setString(1, pro.getPname());
+            pstmt.setString(2, pro.getPcomment());
+            pstmt.setString(3, pro.getPlist());
+            pstmt.setInt(4, pro.getPrice());
+            pstmt.setString(5, pro.getImgSrc1());
+            pstmt.setString(6, pro.getImgSrc2());
+            pstmt.setString(7, pro.getImgSrc3());
+            pstmt.setString(8,pro.getCate());
+            pstmt.setInt(9, pro.getNo());
+
+            cnt = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            con.close(pstmt, conn);
+        }
+        return cnt;
+    }
+
     public List<Product> getCateProductList(String cate) {
         List<Product> proList = new ArrayList<>();
         DBConnect con = new MariaDBCon();
@@ -239,29 +265,5 @@ public class ProductDAO {
             con.close(pstmt, conn);
         }
         return cnt;
-    }
-
-    public String getCateName(String cate) {
-        String catename ="";
-
-        DBConnect con = new MariaDBCon();
-        conn = con.connect();
-        String sql = "select * from category where cno=?";
-        try {
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, cate);
-            rs = pstmt.executeQuery();
-            if(rs.next()){
-                catename = rs.getString("cname");
-
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } finally {
-            con.close(rs, pstmt, conn);
-        }
-
-        return catename;
     }
 }

@@ -74,7 +74,7 @@ public class UpdateProductProCtrl extends HttpServlet {
 
             ProductDAO dao = new ProductDAO();
             int cnt = 0;
-//          cnt = dao.updateProduct(pro);
+          cnt = dao.updateProduct(pro);
 
             if(cnt>0){
                 response.setContentType("text/html; charset=UTF-8");

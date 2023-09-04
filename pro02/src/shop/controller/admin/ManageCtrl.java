@@ -19,6 +19,10 @@ public class ManageCtrl extends HttpServlet {
         List<Custom> customList = new ArrayList<>();
         customList = dao.getCustomList();
 
+        for (Custom cus:customList) {
+            System.out.println(cus.toString());
+        }
+
         request.setAttribute("cusList", customList);
         RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/admin/manage.jsp");
         view.forward(request, response);

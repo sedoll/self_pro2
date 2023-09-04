@@ -166,11 +166,38 @@ public class CustomDAO {
         if(conn!=null){
             System.out.println("SQL 연결 성공");
         }
-
-        String sql = "delete from custom where id=?";
         try {
-            pstmt = conn.prepareStatement(sql);
+            pstmt = conn.prepareStatement(DBConnect.CUSTOM_DELETE);
             pstmt.setString(1, id);
+            cnt = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            con.close(pstmt, conn);
+        }
+        return cnt;
+    }
+
+    public int modifyCustom(Custom cus) {
+        int cnt = 0;
+        DBConnect con = new MariaDBCon();
+        String qpw = "";
+        try {
+            conn = con.connect();
+            pstmt = conn.prepareStatement(DBConnect.CUSTOM_UPDATE);
+            try {
+                qpw = AES256.encryptAES256(cus.getPw(), key);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println("암호화 : "+qpw);
+            pstmt.setString(1, qpw);
+            pstmt.setString(2, cus.getTel());
+            pstmt.setString(3, cus.getEmail());
+            pstmt.setString(4, cus.getAddress());
+            pstmt.setString(5, cus.getBirth());
+            pstmt.setString(6, cus.getId());
+
             cnt = pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);

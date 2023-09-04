@@ -37,7 +37,7 @@ public class MypageModifyProCtrl extends HttpServlet {
             cus.setTel(tel);
             cus.setEmail(email);
             cus.setAddress(address);
-//            cnt = dao.modifyCustom(cus);
+            cnt = dao.modifyCustom(cus);
             if(cnt > 0) {
                 System.out.println("업데이트 완료");
                 response.sendRedirect("/pro02/Mypage.do");
