@@ -78,13 +78,13 @@
 ![image](https://github.com/kuyejin/project2/assets/65212187/75923a7c-7cb5-4c4d-9246-1bce99531779)
 ​
 ## 4️⃣ 물리적 설계 － ＥＲＤ
-![ERD(shop)](/%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/erd.png)
+![ERD(shop)](/%EC%9E%90%EB%A3%8C/%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/erd.png)
 ​
 <br/>
 <br/>
 ​
 # 📐  클래스 다이어그램
-![class다이어그램](/%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/class.png)
+![class다이어그램](/%EC%9E%90%EB%A3%8C/%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/class.png)
 ​
 <br/>
 ​
